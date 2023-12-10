@@ -21,5 +21,8 @@
 
 # ¿Que es kubernetes?
 
+Kubernetes es una plataforma de código abierto diseñada para la automatización, implementación, escalabilidad y operación de aplicaciones en contenedores. Desarrollada por Google, Kubernetes facilita la gestión de contenedores en entornos de producción, permitiendo a los usuarios orquestar y coordinar la ejecución de aplicaciones en clústeres de máquinas.
+
 # Arquitectura
 
+![Diagrama]()
