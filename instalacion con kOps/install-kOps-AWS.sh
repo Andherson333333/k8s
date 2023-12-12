@@ -45,8 +45,8 @@ export KOPS_STATE_STORE=s3://$clname
 kops create cluster --node-count=2 --master-size="t2.micro" --node-size="t2.micro" --master-volume-size=8 --node-volume-size=8 --zones=$az --name $clname
 
 # Aplicar las especificaciones del clúster al clúster
-kops get cluster
-kops update cluster $clname --yes
+#kops get cluster
+#kops update cluster $clname --yes
 
 # El archivo .bashrc es un archivo de script que se ejecuta cuando un usuario inicia sesión.
 echo "export KOPS_STATE_STORE=s3://$clname" >> .bashrc
