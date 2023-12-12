@@ -4,13 +4,13 @@ Kops (Kubernetes Operations) es una herramienta de código abierto que facilita 
 
 ## Requisitos antes de la instalacion
 
- ** Crear una maquina EC2 o en sistema operativo local linux: **
+**Crear una maquina EC2 o en sistema operativo local linux:**
   - python3
   - AWS CLI
   - kubectl
   - SSH keys
 
-** Crear usuario en AWS con los siguientes permisos **
+**Crear usuario en AWS con los siguientes permisos:**
   - AmazonEC2FullAccess
   - AmazonRoute53FullAccess
   - AmazonS3FullAccess
