@@ -21,7 +21,7 @@ Kops (Kubernetes Operations) es una herramienta de código abierto que facilita 
 
 ## Instalacion kOps
 
-Nota:si va configurar un dominio DNS tiene que configurar primero AmazonRoute53 antes de ejecutar este scrip 
+Nota: si va configurar un dominio DNS tiene que configurar primero AmazonRoute53 antes de ejecutar este scrip 
 
 **Instalación del AWS CLI y otras dependencias**
 ```
