@@ -1,3 +1,9 @@
+## Índice de contenidos
+* [docker vs kubernetes](#item1)
+* [¿Que es kubernetes](#item2)
+* [Arquitectura](#item3)
+
+<a name="item1"></a>
 ## docker vs kubernetes
 
 | Característica            | Docker              | Kubernetes                |
@@ -18,11 +24,12 @@
 | Adopción en la Industria  | Desarrollo y prueba  | Estándar en producción    |
 | Tiempo de Vida            | Desde 2013           | Desde 2014                |
 
-
+<a name="item2"></a>
 ## ¿Que es kubernetes?
 
 Kubernetes es una plataforma de código abierto diseñada para la automatización, implementación, escalabilidad y operación de aplicaciones en contenedores. Desarrollada por Google, Kubernetes facilita la gestión de contenedores en entornos de producción, permitiendo a los usuarios orquestar y coordinar la ejecución de aplicaciones en clústeres de máquinas.
 
+<a name="item3"></a>
 ## Arquitectura
 
 Kubernetes trabaja de manera eficiente utilizando una arquitectura distribuida y modular. Aquí hay una descripción simplificada de cómo Kubernetes trabaja:
