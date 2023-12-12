@@ -52,10 +52,10 @@ Luego, ejecute el script
 ```
 ./install-kOps-AWS.sh
 ```
-# Al ejecutar el script, se le pedirá los siguientes parámetros:
-# - Ingrese la Clave de Acceso de AWS
-# - Ingrese la Clave Secreta de AWS
-# - Ingrese el Nombre del Clúster (por ejemplo, my-kube.k8s.local)
-# - Ingrese una Zona de Disponibilidad para el clúster (por ejemplo, us-east-1a)
+**Al ejecutar el script, se le pedirá los siguientes parámetros:**
+   - Ingrese la Clave de Acceso de AWS
+   - Ingrese la Clave Secreta de AWS
+   - Ingrese el Nombre del Clúster (por ejemplo, my-kube.k8s.local)
+   - Ingrese una Zona de Disponibilidad para el clúster (por ejemplo, us-east-1a)
 
 ## Despligue de scrip
