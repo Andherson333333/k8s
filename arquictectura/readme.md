@@ -40,3 +40,39 @@ Kubernetes trabaja de manera eficiente utilizando una arquitectura distribuida y
          - Compuesto por el Container Runtime, Kubelet y Kube-proxy.
 
 ![Diagrama](https://github.com/Andherson333333/k8s/blob/main/arquictectura/imagenes/kubernetes-2.JPG)
+
+### Plano de Control (Control Plane):
+
+1. **kube-apiserver:**
+   - **Descripción:** Es la API de Kubernetes que actúa como interfaz para la comunicación entre los componentes del plano de control y los usuarios o aplicaciones. Recibe comandos del cliente y los procesa para realizar acciones en el clúster.
+
+2. **etcd:**
+   - **Descripción:** Es un almacén de datos distribuido que mantiene la configuración del clúster, el estado actual y otras metadatos. Almacena información de configuración que representa el estado deseado del clúster.
+
+3. **kube-controller-manager:**
+   - **Descripción:** Es responsable de supervisar continuamente el estado del clúster mediante el kube-apiserver. Controladores específicos (como el controlador de nodos, de réplicas, de servicios, etc.) son ejecutados por el kube-controller-manager para garantizar que el estado actual coincida con el estado deseado.
+
+4. **kube-scheduler:**
+   - **Descripción:** Asigna automáticamente los pods a nodos del clúster en función de ciertos criterios, como la capacidad de recursos, restricciones de afinidad, y otras políticas. Ayuda a garantizar una distribución equitativa de carga y recursos.
+
+### Plano de Datos (Data Plane):
+
+1. **Kubelet:**
+   - **Descripción:** Es un agente que se ejecuta en cada nodo del clúster y se comunica con el kube-apiserver. Se encarga de garantizar que los contenedores definidos en los pods estén ejecutándose y saludables en el nodo.
+
+2. **kube-proxy:**
+   - **Descripción:** Mantiene las reglas de red en los nodos. Facilita la comunicación de red entre los pods y el mundo exterior. Implementa el reenvío de red y el balanceo de carga, asegurando la conectividad y el equilibrio de carga.
+
+3. **Container Runtime:**
+   - **Descripción:** Es el software responsable de ejecutar los contenedores. Kubernetes es compatible con varias runtimes, como Docker, containerd, y otros. Se encarga de descargar las imágenes de contenedores, iniciar y detener contenedores, y gestionar los recursos del sistema.
+
+### Descripción General:
+
+- **Plano de Control (Control Plane):**
+  - Es el cerebro de Kubernetes, gestionando el estado del clúster y tomando decisiones sobre qué acciones deben realizarse para mantener el estado deseado.
+
+- **Plano de Datos (Data Plane):**
+  - Implementa las decisiones del plano de control, ejecutando y gestionando los contenedores y facilitando la comunicación de red.
+
+En conjunto, el plano de control y el plano de datos trabajan para proporcionar una plataforma robusta y flexible para la orquestación y gestión de contenedores en un entorno de producción. La comunicación entre los componentes se realiza a través de la API de Kubernetes y el almacenamiento centralizado de datos en etcd garantiza la coherencia y consistencia del estado del clúster.
+
