@@ -32,7 +32,7 @@ sudo apt install nano curl wget awscli -y
     - Navegue a IAM -> Usuers -> Create user-->Attach policies directly
 
  **2.2 Crearlo a través de CLI (debe tener acceso de root o permisos para crear)**
-   - Crear un archivo y copiar el contenido del script
+   - Crear un archivo y copiar el contenido del script creacion-usuario-permisos.sh
      ```
      touch creacion-usuario-permisos.sh
      chmod +x creacion-usuario-permisos.sh
