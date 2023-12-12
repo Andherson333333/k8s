@@ -66,13 +66,5 @@ Kubernetes trabaja de manera eficiente utilizando una arquitectura distribuida y
 3. **Container Runtime:**
    - **Descripción:** Es el software responsable de ejecutar los contenedores. Kubernetes es compatible con varias runtimes, como Docker, containerd, y otros. Se encarga de descargar las imágenes de contenedores, iniciar y detener contenedores, y gestionar los recursos del sistema.
 
-### Descripción General:
-
-- **Plano de Control (Control Plane):**
-  - Es el cerebro de Kubernetes, gestionando el estado del clúster y tomando decisiones sobre qué acciones deben realizarse para mantener el estado deseado.
-
-- **Plano de Datos (Data Plane):**
-  - Implementa las decisiones del plano de control, ejecutando y gestionando los contenedores y facilitando la comunicación de red.
-
 En conjunto, el plano de control y el plano de datos trabajan para proporcionar una plataforma robusta y flexible para la orquestación y gestión de contenedores en un entorno de producción. La comunicación entre los componentes se realiza a través de la API de Kubernetes y el almacenamiento centralizado de datos en etcd garantiza la coherencia y consistencia del estado del clúster.
 
