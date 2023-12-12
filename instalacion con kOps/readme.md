@@ -21,7 +21,7 @@ Kops (Kubernetes Operations) es una herramienta de código abierto que facilita 
 
 ## Instalacion kOps
 
-**1Instalación del AWS CLI y otras dependencias**
+**Instalación del AWS CLI y otras dependencias**
 ```
 sudo apt-get update
 sudo apt install nano curl wget awscli -y
@@ -48,7 +48,6 @@ chmod +x creacion-usuario-permisos.sh
 touch install-kOps-AWS.sh
 chmod +x install-kOps-AWS.sh
 ```
-
 Luego, ejecute el script
 ```
 ./install-kOps-AWS.sh
