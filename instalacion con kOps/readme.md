@@ -1,5 +1,5 @@
-# Ques es kOps?
+## Ques es kOps?
 
-# Permisos necesarios
+## Permisos necesarios
 
-# Instalacion kOps
+## Instalacion kOps
