@@ -33,14 +33,14 @@ sudo apt install nano curl wget awscli -y
 
  **2.2 Crearlo a través de CLI (debe tener acceso de root o permisos para crear)**
    - Crear un archivo y copiar el contenido del script creacion-usuario-permisos.sh
-     ```
-     touch creacion-usuario-permisos.sh
-     chmod +x creacion-usuario-permisos.sh
-     ```
+```
+touch creacion-usuario-permisos.sh
+chmod +x creacion-usuario-permisos.sh
+```
    - Luego, ejecute el script con el comando
-   - ```
-     ./creacion-usuario-permisos.sh
-     ```
+```
+./creacion-usuario-permisos.sh
+```
    - Este script creará un grupo con los permisos requeridos y luego adjuntará ese usuario a ese grupo
 
 ### Una vez creado el usuario, copiaremos otro script en otro archivo**
