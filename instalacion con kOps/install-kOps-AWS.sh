@@ -36,6 +36,7 @@ ssh-keygen -N "" -f $HOME/.ssh/id_rsa
 
 # Crear un bucket S3 donde kOps guardará toda la información del estado del clúster.
 aws s3 mb s3://$clname
+aws s3api put-bucket-versioning --bucket $clname --versioning-configuration Status=Enabled
 
 # Exponer el bucket S3 como variables de entorno.
 export KOPS_STATE_STORE=s3://$clname
