@@ -21,31 +21,38 @@ Kops (Kubernetes Operations) es una herramienta de código abierto que facilita 
 
 ## Instalacion kOps
 
-# Instalación del AWS CLI y otras dependencias
+**1Instalación del AWS CLI y otras dependencias**
+```
 sudo apt-get update
 sudo apt install nano curl wget awscli -y
+```
+### Creación de usuario AWS
+ **2.1 Crearlo a través de la GUI**
+    - Acceda a la consola de AWS
+    - Navegue a IAM -> Usuers -> Create user-->Attach policies directly
 
-# Creación de usuario AWS
-## 2.1 Crearlo a través de la GUI
-   # - Acceda a la consola de AWS
-   # - Navegue a IAM -> Usuarios -> Crear usuario
-   # - Adjunte directamente las políticas necesarias
-
-## 2.2 Crearlo a través de CLI (debe tener acceso de root o permisos para crear)
-   # - Crear un archivo y copiar el contenido del script
+ **2.2 Crearlo a través de CLI (debe tener acceso de root o permisos para crear)**
+   - Crear un archivo y copiar el contenido del script
+     ```
      touch creacion-usuario-permisos.sh
      chmod +x creacion-usuario-permisos.sh
-   # - Luego, ejecute el script con el comando
+     ```
+   - Luego, ejecute el script con el comando
+   - ```
      ./creacion-usuario-permisos.sh
-   # - Este script creará un grupo con los permisos requeridos y luego adjuntará ese usuario a ese grupo
+     ```
+   - Este script creará un grupo con los permisos requeridos y luego adjuntará ese usuario a ese grupo
 
-# Una vez creado el usuario, copiaremos otro script en otro archivo
+### Una vez creado el usuario, copiaremos otro script en otro archivo**
+```
 touch install-kOps-AWS.sh
 chmod +x install-kOps-AWS.sh
+```
 
-# Luego, ejecute el script
+Luego, ejecute el script
+```
 ./install-kOps-AWS.sh
-
+```
 # Al ejecutar el script, se le pedirá los siguientes parámetros:
 # - Ingrese la Clave de Acceso de AWS
 # - Ingrese la Clave Secreta de AWS
