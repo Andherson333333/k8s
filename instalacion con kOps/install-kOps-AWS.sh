@@ -18,6 +18,10 @@ read az
 sudo apt update
 
 # Descargar kubectl y python3
+curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee -a /etc/apt/sources.list.d/kubernetes.list
+
+sudo apt update
 sudo apt-get install -y python3-pip apt-transport-https kubectl
 
 # Descargar kOps
