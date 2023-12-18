@@ -2,6 +2,8 @@
 
 ## Arquictetura
 
+## Requerimientos
+
 ## Creacion de llave ssh
 
 ## Instalacion k0sctl y kubectl
