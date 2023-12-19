@@ -16,6 +16,16 @@ En este caso vamso a instalar con la arquictectura multi-node
 
 ## Requerimientos
 
+**Revisar la documentacion oficial** 
+- https://docs.k0sproject.io/v1.28.4+k0s.0/system-requirements/
+- https://docs.k0sproject.io/v1.28.4+k0s.0/networking/
+, nombrare los mas resaltantes .
+
+![Diagrama]()
+![Diagrama]()
+![Diagrama]()
+![Diagrama]()
+
 ## Creacion de llave ssh
 
 Antes de empezar la configuracion hay que crear la llave ssh desde host donde se va realizar la configuracion
