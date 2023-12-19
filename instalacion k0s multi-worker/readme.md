@@ -33,7 +33,7 @@ Minimo estorage necesario
 
 ![Diagrama](https://github.com/Andherson333333/k8s/blob/main/instalacion%20k0s%20multi-worker/imagenes/storage.JPG)
 
-Puerto necesarios
+Puertos necesarios
 
 ![Diagrama](https://github.com/Andherson333333/k8s/blob/main/instalacion%20k0s%20multi-worker/imagenes/puertos.JPG)
 
