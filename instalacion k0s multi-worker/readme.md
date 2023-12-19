@@ -29,7 +29,7 @@ Memoria minuma requeridad
 
 ![Diagrama](https://github.com/Andherson333333/k8s/blob/main/instalacion%20k0s%20multi-worker/imagenes/requerimientos-1.JPG)
 
-Minimo estorage necesario
+Minimo almacenamiento necesario
 
 ![Diagrama](https://github.com/Andherson333333/k8s/blob/main/instalacion%20k0s%20multi-worker/imagenes/storage.JPG)
 
