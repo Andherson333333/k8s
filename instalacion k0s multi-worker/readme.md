@@ -1,9 +1,11 @@
 ## Índice de contenidos
 * [Referencias](#item1)
 * [Que es k0s?](#item2)
-* [Arquictetura](#item4)
-* [Requerimientos](#item5)
-* [Configuracion k0sctl](#item6)
+* [Arquictetura](#item3)
+* [Requerimientos](#item4)
+* [Creacion de llave ssh](#item5)
+* [Instalacion k0sctl y kubectl](#item6)
+* [Configuracion k0sctl](#item7)
 
 <a name="item1"></a>
 ## Referencias
