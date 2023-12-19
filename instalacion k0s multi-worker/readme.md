@@ -21,9 +21,16 @@ En este caso vamso a instalar con la arquictectura multi-node
 - https://docs.k0sproject.io/v1.28.4+k0s.0/networking/
 , nombrare los mas resaltantes .
 
-![Diagrama](https://github.com/Andherson333333/k8s/blob/main/instalacion%20k0s%20multi-worker/imagenes/requerimientos-1.JPG)
-![Diagrama](https://github.com/Andherson333333/k8s/blob/main/instalacion%20k0s%20multi-worker/imagenes/storage.JPG)
+Arquictetura soportada
 ![Diagrama](https://github.com/Andherson333333/k8s/blob/main/instalacion%20k0s%20multi-worker/imagenes/arquitectura.JPG)
+
+
+![Diagrama](https://github.com/Andherson333333/k8s/blob/main/instalacion%20k0s%20multi-worker/imagenes/requerimientos-1.JPG)
+
+Minimo estorage necesario
+![Diagrama](https://github.com/Andherson333333/k8s/blob/main/instalacion%20k0s%20multi-worker/imagenes/storage.JPG)
+
+Puerto necesarios
 ![Diagrama](https://github.com/Andherson333333/k8s/blob/main/instalacion%20k0s%20multi-worker/imagenes/puertos.JPG)
 
 ## Creacion de llave ssh
