@@ -1,19 +1,30 @@
+## Índice de contenidos
+* [Referencias](#item1)
+* [Que es k0s?](#item2)
+* [Arquictetura](#item4)
+* [Requerimientos](#item5)
+* [Configuracion k0sctl](#item6)
+
+<a name="item1"></a>
 ## Referencias
 
 **Documentacion oficial**
 - https://docs.k0sproject.io/v1.28.4+k0s.0/
 - https://docs.k0sproject.io/v1.28.4+k0s.0/k0sctl-install/
-
-## Que es k0s
+- 
+<a name="item2"></a>
+## Que es k0s?
 
 k0s es una distribución de Kubernetes con todo incluido y de código abierto, que está configurada con todas las funciones necesarias para crear un clúster de Kubernetes.k0s se distribuye como un único binario sin dependencias del sistema operativo del host además del kernel del sistema operativo del host. Funciona con cualquier Linux sin paquetes de software ni configuración adicionales.
 
+<a name="item3"></a>
 ## Arquictetura
 
 En este caso vamso a instalar con la arquictectura multi-node
 
 ![Diagrama](https://github.com/Andherson333333/k8s/blob/main/instalacion%20k0s%20multi-worker/imagenes/ssh-key-config.JPG)
 
+<a name="item4"></a>
 ## Requerimientos
 
 **Revisar la documentacion oficial** 
@@ -37,6 +48,7 @@ Puertos necesarios
 
 ![Diagrama](https://github.com/Andherson333333/k8s/blob/main/instalacion%20k0s%20multi-worker/imagenes/puertos.JPG)
 
+<a name="item5"></a>
 ## Creacion de llave ssh
 
 Antes de empezar la configuracion hay que crear la llave ssh desde host donde se va realizar la configuracion
@@ -47,6 +59,7 @@ Una ves creada la llave ssh realizamos la configuracion de llave en los diferent
 
 ![Diagrama]()
 
+<a name="item6"></a>
 ## Instalacion k0sctl y kubectl
 
 k0sctl es una herramienta de línea de comandos para iniciar y administrar clústeres k0s. k0sctl se conecta a los hosts proporcionados mediante SSH y recopila información sobre los hosts, con los que forma un clúster configurando los hosts, implementando k0s y luego conectando los nodos k0s.
@@ -62,6 +75,7 @@ Una ves creado y darle los permisos necesarios podemos ejecutar el scrip
 ./install-binary-and-kubeclt.sh
 ```
 
+<a name="item7"></a>
 ## Configuracion k0sctl
 
 Generar el archivo k0sctl.yaml este archivo contiene las configuraciones que realizara
