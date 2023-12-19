@@ -24,17 +24,7 @@ En este caso vamso a instalar con la arquictectura multi-node
 ![Diagrama]()
 ![Diagrama]()
 ![Diagrama]()
-
-| Protocolo | Puerto | Servicio          | Dirección                    | Notas                                                                                               |
-|-----------|--------|-------------------|------------------------------|-----------------------------------------------------------------------------------------------------|
-| TCP       | 2380   | etcd peers        | controller <-> controller    | Se utiliza para la comunicación entre los nodos controladores (controllers) de etcd.               |
-| TCP       | 6443   | kube-apiserver     | worker, CLI => controller    | El kube-apiserver, componente del servidor de la API de Kubernetes, utiliza este puerto. Comunicación autenticada con certificados TLS de cliente de Kube y tokens de ServiceAccount con RBAC. |
-| TCP       | 179    | kube-router        | worker <-> worker             | Sesiones de enrutamiento BGP entre pares de nodos de trabajador.                                      |
-| UDP       | 4789   | Calico            | worker <-> worker             | Se utiliza para la capa de superposición VXLAN de Calico.                                             |
-| TCP       | 10250  | kubelet            | controller, worker => host * | API autenticada de kubelet para la comunicación entre el nodo controlador, los nodos de trabajador y el host. |
-| TCP       | 9443   | k0s-api            | controller <-> controller    | API de unión del controlador k0s, autenticación mediante token con TLS.                               |
-| TCP       | 8132   | konnectivity       | worker <-> controller         | Konnectivity se utiliza como un túnel "inverso" entre el kube-apiserver y los kubelets de los nodos de trabajador. |
-
+![Diagrama]()
 
 ## Creacion de llave ssh
 
@@ -48,6 +38,8 @@ Una ves creada la llave ssh realizamos la configuracion de llave en los diferent
 
 ## Instalacion k0sctl y kubectl
 
+k0sctl es una herramienta de línea de comandos para iniciar y administrar clústeres k0s. k0sctl se conecta a los hosts proporcionados mediante SSH y recopila información sobre los hosts, con los que forma un clúster configurando los hosts, implementando k0s y luego conectando los nodos k0s.
+
 Para mayor facilidad puede ejecutar el scrip del repositorio esto ayudara a instalar k0sctl y kubectl en el host que controlara el cluster kubernetes
 ```
 touch install-binary-and-kubeclt.sh
@@ -60,6 +52,32 @@ Una ves creado y darle los permisos necesarios podemos ejecutar el scrip
 ```
 
 ## Configuracion k0sctl
+
+Generar el archivo k0sctl.yaml este archivo contiene las configuraciones que realizara
+
+```
+k0sctl init > k0sctl.yaml
+```
+Antes de aplicar las configuraciones editar su archivo k0sctl.yaml, una ves realizada los nuevos parametros podemos aplicar la configuracion
+
+```
+k0sctl apply --config k0sctl.yaml
+```
+Luego generamos nuestro archivo kubeconfig 
+
+```
+k0sctl kubeconfig > kubeconfig
+```
+Ya luego de esto podemos acceder a nuestro recursos para verificar la informacion de la instalacion puede ejecutar el siguiente comando
+
+```
+kubectl get pods --kubeconfig kubeconfig -A
+```
+y para mayor comodidad puede exportar la ubicacion de su archivo kubeconfig para solo realizar las consultas con kubectl
+
+```
+export KUBECONFIG="$(pwd)/kubeconfig"
+```
 
 
 
