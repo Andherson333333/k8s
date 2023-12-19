@@ -40,7 +40,14 @@ Una ves creada la llave ssh realizamos la configuracion de llave en los diferent
 
 Para mayor facilidad puede ejecutar el scrip del repositorio esto ayudara a instalar k0sctl y kubectl en el host que controlara el cluster kubernetes
 ```
-touch 
+touch install-binary-and-kubeclt.sh
+chmod +x install-binary-and-kubeclt.sh
 ```
+Una ves creado y darle los permisos necesarios podemos ejecutar el scrip
+
+```
+./install-binary-and-kubeclt.sh
+```
+
 ## Configuracion k0sctl
 
