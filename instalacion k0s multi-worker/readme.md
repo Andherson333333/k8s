@@ -59,7 +59,7 @@ ssh-keygen
 ```
 Una ves creada la llave ssh realizamos la configuracion de llave en los diferentes host , puede copiarla en los host correspodientes o hacer la configuracion  `ssh-copy-id`
 
-![Diagrama]()
+![Diagrama](https://github.com/Andherson333333/k8s/blob/main/instalacion%20k0s%20multi-worker/imagenes/k0s-ssh-key.JPG)
 
 <a name="item6"></a>
 ## Instalacion k0sctl y kubectl
