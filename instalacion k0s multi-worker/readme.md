@@ -1,8 +1,8 @@
 ## Referencias
 
 **Documentacion oficial**
-  https://docs.k0sproject.io/v1.28.4+k0s.0/
-  https://docs.k0sproject.io/v1.28.4+k0s.0/k0sctl-install/
+    https://docs.k0sproject.io/v1.28.4+k0s.0/
+    https://docs.k0sproject.io/v1.28.4+k0s.0/k0sctl-install/
 
 ## Que es k0s
 
@@ -17,6 +17,14 @@ En este caso vamso a instalar con la arquictectura multi-node
 ## Requerimientos
 
 ## Creacion de llave ssh
+
+Antes de empezar la configuracion hay que crear la llave ssh desde host donde se va realizar la configuracion
+```
+ssh-keygen
+```
+Una ves creada la llave ssh realizamos la configuracion de llave en los diferentes host , puede copiarla en los host correspodientes o hacer la configuracion  `ssh-copy-id`
+
+![Diagrama]()
 
 ## Instalacion k0sctl y kubectl
 
