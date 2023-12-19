@@ -12,7 +12,7 @@ k0s es una distribución de Kubernetes con todo incluido y de código abierto, q
 
 En este caso vamso a instalar con la arquictectura multi-node
 
-![Diagrama]()
+![Diagrama](https://github.com/Andherson333333/k8s/blob/main/instalacion%20k0s%20multi-worker/imagenes/ssh-key-config.JPG)
 
 ## Requerimientos
 
@@ -21,10 +21,10 @@ En este caso vamso a instalar con la arquictectura multi-node
 - https://docs.k0sproject.io/v1.28.4+k0s.0/networking/
 , nombrare los mas resaltantes .
 
-![Diagrama]()
-![Diagrama]()
-![Diagrama]()
-![Diagrama]()
+![Diagrama](https://github.com/Andherson333333/k8s/blob/main/instalacion%20k0s%20multi-worker/imagenes/requerimientos-1.JPG)
+![Diagrama](https://github.com/Andherson333333/k8s/blob/main/instalacion%20k0s%20multi-worker/imagenes/storage.JPG)
+![Diagrama](https://github.com/Andherson333333/k8s/blob/main/instalacion%20k0s%20multi-worker/imagenes/arquitectura.JPG)
+![Diagrama](https://github.com/Andherson333333/k8s/blob/main/instalacion%20k0s%20multi-worker/imagenes/puertos.JPG)
 
 ## Creacion de llave ssh
 
