@@ -1,8 +1,8 @@
 ## Referencias
 
 **Documentacion oficial**
-    https://docs.k0sproject.io/v1.28.4+k0s.0/
-    https://docs.k0sproject.io/v1.28.4+k0s.0/k0sctl-install/
+- https://docs.k0sproject.io/v1.28.4+k0s.0/
+- https://docs.k0sproject.io/v1.28.4+k0s.0/k0sctl-install/
 
 ## Que es k0s
 
