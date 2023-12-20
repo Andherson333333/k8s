@@ -27,14 +27,22 @@ LoadBalancer: Este modo se encarga de dar acceso externo a los pod a traves de u
 
 ## Comandos y pruebas
 
-Se va a realizar varias pruebas para verificar las funciones de los tipos de redes y mas
+Se va a realizar varias pruebas para verificar las funciones de los tipos de redes:
 
-
-1)Verificacacion de funcion de ClusterIP
+1)ClusterIP
 
 IP de los Pod
 
 al destruir el pod como se ve cambia la ip , ahora para descubrir y mapiar ese servicio kubernetes usa los labels & selector como se ven a continuacion
+
+2)NodePort
+
+En esta prueba se verifica que pasa al aplicar NodePort comparado con el ClusterIP , como se ve por defecto la red Overlay se mantiene como ClusterIP
+pero , el modo cambia al NodePort y se crean unos puertos para poder acceder a los pod cabe destacar que por defecto se crear puerto por encima del 30000
+
+3)LoadBalancer 
+
+Al realizar el modo Loadbalancer deberia crearse una Ip externa pero en este caso estamso trabajando sobre maquinas EC2 , por eso no da una ip externa al menos que se le configure un loadbalancer externo (esto se puede hacer con herramientos como Metallb entre otras).
 
 
 
