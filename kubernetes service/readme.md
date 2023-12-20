@@ -19,9 +19,24 @@ Funcion basico de un service se consta de 3 variables
 Hay 3 tipos de servicio en kubernetes:
 
 ClusteIP: es la configuracion por default que trae al crear el servicio este se encarga de balancear la carga de los pod (round robin) , y descubrir los servicios a traves de labels && selector 
-NodePort:
-LoadBalancer:
+
+NodePort: Se encarga de dar acceso a los pod a traves de los nodos se usa generalmente en una red LAN .
+
+LoadBalancer: Este modo se encarga de dar acceso externo a los pod a traves de un Loadbalancer , esto se aplica 
 
 
 ## Comandos y pruebas
+
+Se va a realizar varias pruebas para verificar las funciones de los tipos de redes y mas
+
+
+1)Verificacacion de funcion de ClusterIP
+
+IP de los Pod
+
+al destruir el pod como se ve cambia la ip , ahora para descubrir y mapiar ese servicio kubernetes usa los labels & selector como se ven a continuacion
+
+
+
+
 
