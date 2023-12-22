@@ -44,7 +44,7 @@ Hay 3 tipos de servicio en kubernetes:
 
 Se va a realizar varias pruebas para verificar las funciones de los tipos de redes:
 
-1)ClusterIP
+`ClusterIP`
 
 IP de los Pod
 
@@ -59,14 +59,14 @@ al destruir el pod como se ve cambia la ip ,
  
 ![Diagrama](https://github.com/Andherson333333/k8s/blob/main/kubernetes%20service/imagenes/service-3.JPG)
 
-2)NodePort
+`NodePort`
 
 En esta prueba se verifica que pasa al aplicar NodePort comparado con el ClusterIP , como se ve por defecto la red Overlay se mantiene como ClusterIP
 pero , el modo cambia al NodePort y se crean unos puertos para poder acceder a los pod cabe destacar que por defecto se crear puerto por encima del 30000
 
 ![Diagrama](https://github.com/Andherson333333/k8s/blob/main/kubernetes%20service/imagenes/service-5.JPG)
 
-3)LoadBalancer 
+`LoadBalancer`
 
 Al realizar el modo Loadbalancer deberia crearse una Ip externa pero en este caso estamso trabajando sobre maquinas EC2 , por eso no da una ip externa al menos que se le configure un loadbalancer externo (esto se puede hacer con herramientos como Metallb entre otras).
 
