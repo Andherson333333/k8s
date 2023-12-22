@@ -22,11 +22,10 @@ Las redes Overlay son aplicadas para crear una red virtual encima de la red prin
 <a name="item3"></a>
 ## Tipos de servicio
 
-Funcion basico de un service se consta de 3 variables
-
-1 Loadbalancer
-2 descubrir servicios
-3 Exporner los servicios
+**Funcion basico de un service se consta de 3 variables**
+ - Loadbalancer
+ - Descubrir servicios
+ - Exporner los servicios
 
 Hay 3 tipos de servicio en kubernetes:
 
