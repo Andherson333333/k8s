@@ -49,14 +49,16 @@ al destruir el pod como se ve cambia la ip ,
 En esta prueba se verifica que pasa al aplicar NodePort comparado con el ClusterIP , como se ve por defecto la red Overlay se mantiene como ClusterIP
 pero , el modo cambia al NodePort y se crean unos puertos para poder acceder a los pod cabe destacar que por defecto se crear puerto por encima del 30000
 
-![Diagrama]()
+![Diagrama](https://github.com/Andherson333333/k8s/blob/main/kubernetes%20service/imagenes/service-5.JPG)
 
 3)LoadBalancer 
 
 Al realizar el modo Loadbalancer deberia crearse una Ip externa pero en este caso estamso trabajando sobre maquinas EC2 , por eso no da una ip externa al menos que se le configure un loadbalancer externo (esto se puede hacer con herramientos como Metallb entre otras).
 
-![Diagrama]()
+![Diagrama](https://github.com/Andherson333333/k8s/blob/main/kubernetes%20service/imagenes/service-6.JPG)
 
-![Diagrama]()
+Configurado con metalb
+
+![Diagrama](https://github.com/Andherson333333/k8s/blob/main/kubernetes%20service/imagenes/Captura%20desde%202023-12-20%2019-52-38.png)
 
 
