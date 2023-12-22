@@ -2,6 +2,8 @@
 
 En Kubernetes, un servicio es un recurso abstracto que define un conjunto lógico de Pods y una política por la cual acceder a ellos. Proporciona una forma estable de acceder a la funcionalidad ofrecida por los conjuntos de Pods, independientemente de su ubicación exacta en la red o de cuántos Pods estén ejecutándose. Los servicios permiten la exposición de aplicaciones y componentes dentro del clúster, así como también pueden ser utilizados para la exposición externa a través de balanceadores de carga.
 
+![Diagrama]()
+
 ##  Redes Overlay
 
 Una red superpuesta (en inglés, overlay network)1​ es una red virtual de nodos enlazados lógicamente, que está construida sobre una o más redes subyacentes (underlying network). Se dice que los nodos de la red superpuesta están conectados por enlaces virtuales. Su objetivo es implementar servicios de red que no están disponibles en la/s red/es subyacente/s. Las redes superpuestas pueden apilarse de forma que tenga capas que proporcionen servicios a la capa superior.
@@ -20,10 +22,15 @@ Hay 3 tipos de servicio en kubernetes:
 
 ClusteIP: es la configuracion por default que trae al crear el servicio este se encarga de balancear la carga de los pod (round robin) , y descubrir los servicios a traves de labels && selector 
 
+![Diagrama]()
+
 NodePort: Se encarga de dar acceso a los pod a traves de los nodos se usa generalmente en una red LAN .
+
+![Diagrama]()
 
 LoadBalancer: Este modo se encarga de dar acceso externo a los pod a traves de un Loadbalancer , esto se aplica 
 
+![Diagrama](https://github.com/Andherson333333/k8s/blob/main/kubernetes%20service/imagenes/load-balancer-1.JPG)
 
 ## Comandos y pruebas
 
@@ -37,7 +44,7 @@ IP de los Pod
 
 al destruir el pod como se ve cambia la ip ,
 
-![Diagrama](https://github.com/Andherson333333/k8s/blob/main/kubernetes%20service/imagenes/service-2.JPG)
+![Diagrama]()
 
 
  ahora para descubrir y mapiar ese servicio kubernetes usa los labels & selector como se ven a continuacion
