@@ -2,7 +2,7 @@
 
 En Kubernetes, un servicio es un recurso abstracto que define un conjunto lógico de Pods y una política por la cual acceder a ellos. Proporciona una forma estable de acceder a la funcionalidad ofrecida por los conjuntos de Pods, independientemente de su ubicación exacta en la red o de cuántos Pods estén ejecutándose. Los servicios permiten la exposición de aplicaciones y componentes dentro del clúster, así como también pueden ser utilizados para la exposición externa a través de balanceadores de carga.
 
-![Diagrama]()
+![Diagrama](https://github.com/Andherson333333/k8s/blob/main/kubernetes%20service/imagenes/service-9.JPG)
 
 ##  Redes Overlay
 
