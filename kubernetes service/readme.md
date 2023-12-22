@@ -22,11 +22,9 @@ Hay 3 tipos de servicio en kubernetes:
 
 ClusteIP: es la configuracion por default que trae al crear el servicio este se encarga de balancear la carga de los pod (round robin) , y descubrir los servicios a traves de labels && selector 
 
-![Diagrama]()
-
 NodePort: Se encarga de dar acceso a los pod a traves de los nodos se usa generalmente en una red LAN .
 
-![Diagrama]()
+![Diagrama](https://github.com/Andherson333333/k8s/blob/main/kubernetes%20service/imagenes/node-port2.2.JPG)
 
 LoadBalancer: Este modo se encarga de dar acceso externo a los pod a traves de un Loadbalancer , esto se aplica 
 
