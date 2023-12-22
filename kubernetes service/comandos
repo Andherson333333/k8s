@@ -1,0 +1,5 @@
+kubectl get pod - o wide
+kubectl get node -o wide 
+kubectl get svc -o wide 
+kubectl get pod nginx-deployment-86dcfdf4c6-f5bl2  --show-labels
+kubectl get pod nginx-deployment-86dcfdf4c6-p69fx  --show-labels
