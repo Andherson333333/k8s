@@ -47,8 +47,6 @@ El administrador debe proporcionar los siguientes elementos para configurar Meta
 
 En Kubernetes, un Ingress es un objeto que permite el acceso a sus servicios de Kubernetes desde fuera del clúster de Kubernetes. Configura el acceso creando una colección de reglas que definen qué conexiones entrantes alcanzan qué servicios.
 
-![Diagrama]()
-
 <a name="item5"></a>
 ## Instalacion metallb y nginx
 
