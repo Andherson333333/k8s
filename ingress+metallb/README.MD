@@ -8,16 +8,14 @@ MetalLB es una solución de software pura que proporciona una implementación de
 
 ## Características de MetalLB
 
-MetalLB proporciona una implementación de balanceador de carga que se puede configurar para usar ARP (capa 2) o BGP (capa 3) para anunciar direcciones IP de servicio.
+MetalLB proporciona una implementación de balanceador de carga que se puede configurar para usar ARP (layer 2) o BGP (layer 3) para anunciar direcciones IP de servicio.
 
-ARP
-La dirección IP del servicio se publica enviando respuestas ARP (Protocolo de Resolución de Direcciones) en la red local. Este método funciona en la capa de enlace de datos del modelo OSI (capa 2).
+ARP (layer2)
+La dirección IP del servicio se publica enviando respuestas ARP (Protocolo de Resolución de Direcciones) en la red local. Este método funciona en la capa de enlace de datos del modelo OSI (capa 2). El administrador solo tiene que proporcionar un rango de direcciones IP para ser utilizado por MetalLB.
 
-El administrador solo tiene que proporcionar un rango de direcciones IP para ser utilizado por MetalLB.
 
 BGP
 La dirección IP del servicio se publica con solicitudes BGP al enrutador. Este método funciona en la capa de red del modelo OSI (capa 3).
-
 El administrador debe proporcionar los siguientes elementos para configurar MetalLB con BGP:
 
 - La dirección IP del router.
