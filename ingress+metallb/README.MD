@@ -99,17 +99,17 @@ kubectl get ns
 
 ![Diagrama](https://github.com/Andherson333333/k8s/blob/main/ingress%2Bmetallb/imagenes/ingress-2.JPG)
 
-Metallb pod y servicios verificacion
+Metallb pod y servicios verificacion (por cada nodo tiene que haber un speaker)
 ```
 kubectl get pod -n metallb-system && kubectl get svc -n metallb-system
 ```
-![Diagrama]()
+![Diagrama](https://github.com/Andherson333333/k8s/blob/main/ingress%2Bmetallb/imagenes/ingress-8.JPG)
 
-nginx pod y servicios verificacion
+nginx pod y servicios verificacion 
 ```
 kubectl get pod -n ingress-nginx &&  kubectl get svc -n ingress-nginx
 ```
-![Diagrama]()
+![Diagrama](https://github.com/Andherson333333/k8s/blob/main/ingress%2Bmetallb/imagenes/ingress-9.JPG)
 
 <a name="item8"></a>
 ## Configuracion metallb
