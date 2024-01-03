@@ -20,14 +20,10 @@ La dirección IP del servicio se publica con solicitudes BGP al enrutador. Este 
 
 El administrador debe proporcionar los siguientes elementos para configurar MetalLB con BGP:
 
-La dirección IP del router.
-
-El número AS (Sistema Autónomo) del router.
-
-Un número AS privado para ser utilizado por MetalLB.
-
-El prefijo CIDR de rango de direcciones IP que utilizará MetalLB.
-
+- La dirección IP del router.
+- El número AS (Sistema Autónomo) del router.
+- Un número AS privado para ser utilizado por MetalLB.
+- El prefijo CIDR de rango de direcciones IP que utilizará MetalLB.
 
 ## Que es nginx ingress?
 
