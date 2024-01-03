@@ -40,7 +40,7 @@ Una ves descargado ambos manifiesto procedemos aplicarlo cabe destacar que autom
 `Nginx`
 ```
  kubectl apply -f ingress-nginx-manifest.yaml
-``
+```
 
 `Metallb`
 
@@ -48,7 +48,9 @@ Una ves descargado ambos manifiesto procedemos aplicarlo cabe destacar que autom
 kubectl apply -f metallb-native.yaml
 ```
 
-## Verificacion 
+## Verificacion de instalacion
+
+
 
 
 
