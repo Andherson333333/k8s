@@ -7,7 +7,7 @@ metadata:
     kubernetes.io/ingress.class: "nginx"
 spec:
   rules:
-  - host: hellov1.192.168.1.30.nip.io
+  - host: hellov1.192.168.1.30.nip.io # estos es uan herramienta para no escribir en el /ect/hosts
     http:
       paths:
       - path: /
