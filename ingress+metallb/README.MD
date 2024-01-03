@@ -50,6 +50,27 @@ kubectl apply -f metallb-native.yaml
 
 ## Verificacion de instalacion
 
+Para verificar la instalacion usamos los siguientes comandos:
+
+Aqui se verificara los namespace si se crearon correctamente
+```
+kubectl get ns
+```
+
+![Diagrama]()
+
+Metallb pod y servicios verificacion
+```
+kubectl get pod -n metallb-system && kubectl get svc -n metallb-system
+```
+![Diagrama]()
+
+nginx pod y servicios verificacion
+```
+kubectl get pod -n ingress-nginx &&  kubectl get svc -n ingress-nginx
+```
+![Diagrama]()
+
 
 
 
