@@ -134,9 +134,11 @@ Hay que realizar un pequeño cambio en el servicio de ingress ya que por defecto
 ```
 kubectl edit svc ingress-nginx-controller -n ingress-nginx
 ```
+![Diagrama](https://github.com/Andherson333333/k8s/blob/main/ingress%2Bmetallb/imagenes/ingress-4.JPG)
+
 Realizamos el cambio
 
-![Diagrama]()
+![Diagrama](https://github.com/Andherson333333/k8s/blob/main/ingress%2Bmetallb/imagenes/ingress-5.JPG)
 
 <a name="item10"></a>
 ## Creacion manifiestos y despliegue 
@@ -149,7 +151,9 @@ Una ves configurado vamso a crear los manifiesto para probar toda la configuraci
 
 aplicamos los manifiesto y verificamos que funciones 
 
-![Diagrama]()
+![Diagrama](https://github.com/Andherson333333/k8s/blob/main/ingress%2Bmetallb/imagenes/ingress-7.JPG)
+
+![Diagrama](https://github.com/Andherson333333/k8s/blob/main/ingress%2Bmetallb/imagenes/ingress-6.JPG)
 
 
 
