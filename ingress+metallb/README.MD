@@ -43,9 +43,10 @@ Una ves descargado ambos manifiesto procedemos aplicarlo cabe destacar que autom
 ``
 
 `Metallb`
+
 ```
 kubectl apply -f metallb-native.yaml
-``
+```
 
 ## Verificacion 
 
