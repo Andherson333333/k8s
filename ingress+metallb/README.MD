@@ -69,7 +69,7 @@ Luego ejecutar el scrip
 ./instal-metallb-nginx.sh
 ```
 
-![Diagrama]()
+![Diagrama](https://github.com/Andherson333333/k8s/blob/main/ingress%2Bmetallb/imagenes/ingress-1.JPG)
 
 <a name="item6"></a>
 ## despligue de manifiestos
@@ -97,7 +97,7 @@ Aqui se verificara los namespace si se crearon correctamente
 kubectl get ns
 ```
 
-![Diagrama]()
+![Diagrama](https://github.com/Andherson333333/k8s/blob/main/ingress%2Bmetallb/imagenes/ingress-2.JPG)
 
 Metallb pod y servicios verificacion
 ```
@@ -123,6 +123,9 @@ verificacions la creacion del pool y el anuncio
 ```
  kubectl get  l2Advertisement -n metallb-system
 ```
+
+![Diagrama](https://github.com/Andherson333333/k8s/blob/main/ingress%2Bmetallb/imagenes/ingress-3.JPG)
+
 
 `Nota :` para verificar el funcinamiente puede crear un servicio como loadbalancer
 
