@@ -10,7 +10,7 @@
 * [Configuracion del nginx-ingress](#item9)
 * [Creacion manifiestos y despliegue](#item10)
 
-![Diagrama]()
+![Diagrama](https://github.com/Andherson333333/k8s/blob/main/ingress%2Bmetallb/imagenes/ingress-10.JPG)
 
 
 <a name="item1"></a>
