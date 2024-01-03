@@ -116,8 +116,8 @@ kubectl get pod -n ingress-nginx &&  kubectl get svc -n ingress-nginx
 
 Vamos usar la configuracion Layer2 (arp), para usar esta configuracion se crearan 2 manifiestos :
 
-- El primer manifiesto contendra el pool de las ip 
-- El segundo manifiesto se encarga de anunciar las ip al swict
+- El primer manifiesto contendra el pool de las ip `poolIP.yml`
+- El segundo manifiesto se encarga de anunciar las ip al swict `L2Advertisement.yml`
 
 verificacions la creacion del pool y el anuncio
 ```
