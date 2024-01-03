@@ -18,7 +18,7 @@ Para ver una los metodos de instalacion por favor ir a la documentacion oficial:
 
 `ngnix` https://kubernetes.github.io/ingress-nginx/deploy/
 
-En esta caso lo vamos hacer mediante  manifiestos , en el repositorio hay un scrip que descarga el manifiesto con la ultima version disponible de ambos complementos copiar y pegar el contenido en su archivo y darle los permisos necesarios 
+En esta caso lo vamos hacer mediante manifiestos , en el repositorio hay un scrip que descarga el manifiesto con la ultima version disponible de ambos complementos copiar y pegar el contenido del `instal-metallb-nginx.sh` en su archivo y darle los permisos necesarios 
 
 ```
 touch instal-metallb-nginx.sh
@@ -29,8 +29,31 @@ Luego ejecutar el scrip
 ```
 ./instal-metallb-nginx.sh
 ```
+
 ![Diagrama]()
 
+
 ## Instalacion 
+
+Una ves descargado ambos manifiesto procedemos aplicarlo cabe destacar que automaticamente crea su propio namespace 
+
+`Nginx`
+```
+ kubectl apply -f ingress-nginx-manifest.yaml
+``
+
+`Metallb`
+```
+kubectl apply -f metallb-native.yaml
+``
+
+## Verificacion 
+
+
+
+
+
+
+
 
 
