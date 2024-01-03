@@ -10,6 +10,9 @@
 * [Configuracion del nginx-ingress](#item9)
 * [Creacion manifiestos y despliegue](#item10)
 
+![Diagrama]()
+
+
 <a name="item1"></a>
 ## Requisitos
 
@@ -19,8 +22,6 @@ Antes de instalar se tiene que tener configurado un cluster kubernetes , cabe de
 ## Que es metallb?
 
 MetalLB es una solución de software pura que proporciona una implementación de equilibrador de carga de red para clústeres de Kubernetes que no están implementados en un proveedor de nube compatible que utiliza protocolos de enrutamiento estándar. Al instalar la solución MetalLB, obtiene efectivamente los servicios LoadBalancer dentro de su clúster de Kubernetes.
-
-![Diagrama]()
 
 <a name="item3"></a>
 ## Características de MetalLB
