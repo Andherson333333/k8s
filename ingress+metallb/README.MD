@@ -8,11 +8,24 @@ MetalLB es una solución de software pura que proporciona una implementación de
 
 ## Que es nginx ingress?
 
-
+En Kubernetes, un Ingress es un objeto que permite el acceso a sus servicios de Kubernetes desde fuera del clúster de Kubernetes. Configura el acceso creando una colección de reglas que definen qué conexiones entrantes alcanzan qué servicios.
 
 ## Metodos Instalacion metallb
 
+Para ver los metodos de instalacion verificar la documentacion oficial 
+
+Hay 3 tipos de instalacion
+Helm
+Kustomize
+Manifiesto
+
 ## Metodos Instalacion nginx ingress
+
+Para ver los metodos de instalacion verificar la documentacion oficial
+Hay 3 tipos de instalacion
+Helm
+Kustomize
+Manifiesto
 
 ## Verificacion Instalacion
 
