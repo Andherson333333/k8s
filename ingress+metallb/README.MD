@@ -120,6 +120,10 @@ Realizamos el cambio
 
 ![Diagrama]()
 
+## Creacion manifiestos 
+
+Una ves configurado vamso a crear los manifiesto para probar toda la configuracion se crearan 3 manifiestos
+
 
 
 
