@@ -15,16 +15,22 @@ En Kubernetes, un Ingress es un objeto que permite el acceso a sus servicios de 
 Para ver una los metodos de instalacion por favor ir a la documentacion oficial:
 
 `metallb` https://metallb.org/installation/
+
 `ngnix` https://kubernetes.github.io/ingress-nginx/deploy/
 
-En esta caso lo vamos hacer mediante  Manifests , en el repositorio hay un scrip que descarga el manifiesto con la ultima version disponible
+En esta caso lo vamos hacer mediante  manifiestos , en el repositorio hay un scrip que descarga el manifiesto con la ultima version disponible de ambos complementos copiar y pegar el contenido en su archivo y darle los permisos necesarios 
 
 ```
-lsb_release -a
+touch instal-metallb-nginx.sh
+chmod +x
 ```
+Luego ejecutar el scrip
+
 ```
-lsb_release -a
+./instal-metallb-nginx.sh
 ```
+![Diagrama]()
+
 ## Instalacion 
 
 
