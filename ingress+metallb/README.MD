@@ -122,7 +122,15 @@ Realizamos el cambio
 
 ## Creacion manifiestos 
 
-Una ves configurado vamso a crear los manifiesto para probar toda la configuracion se crearan 3 manifiestos
+Una ves configurado vamso a crear los manifiesto para probar toda la configuracion se crearan 3 manifiestos:
+
+deployment.yml
+service.yml
+ingress.yml
+
+aplicamos los manifiesto y verificamos que funciones 
+
+![Diagrama]()
 
 
 
