@@ -8,7 +8,6 @@ MetalLB es una solución de software pura que proporciona una implementación de
 
 ## Características de MetalLB
 
-Características de MetalLB
 MetalLB proporciona una implementación de balanceador de carga que se puede configurar para usar ARP (capa 2) o BGP (capa 3) para anunciar direcciones IP de servicio.
 
 ARP
@@ -95,13 +94,33 @@ kubectl get pod -n ingress-nginx &&  kubectl get svc -n ingress-nginx
 ```
 ![Diagrama]()
 
-
 ## Configuracion metallb
 
 Vamos usar la configuracion Layer2 (arp), para usar esta configuracion se crearan 2 manifiestos :
 
 1)El primer manifiesto contendra el pool de las ip 
 2)El segundo manifiesto se encarga de anunciar las ip al swict
+
+verificacions la creacion del pool y el anuncio
+```
+ kubectl get  l2Advertisement -n metallb-system
+```
+
+`Nota :` para verificar el funcinamiente puede crear un servicio como loadbalancer
+
+
+## Configuracion del nginx-ingress
+
+Hay que realizar un pequeño cambio en el servicio de ingress ya que por defecto biene como NodePort hay que cambiarlo a tipo LoadBalancer
+
+```
+kubectl edit svc ingress-nginx-controller -n ingress-nginx
+```
+Realizamos el cambio
+
+![Diagrama]()
+
+
 
 
 
