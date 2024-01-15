@@ -22,7 +22,16 @@ Estos certificacods y token se encuentran dentro del archivo admin.conf .
 
 ## Que es RBAC?
 
+RBAC, o Control de Acceso Basado en Roles (Role-Based Access Control), es un sistema de gestión de acceso que se utiliza en Kubernetes para definir y gestionar permisos de acceso a los recursos del clúster. Proporciona un marco para controlar qué usuarios, cuentas de servicio o procesos pueden realizar operaciones específicas en el clúster.
+
 ## Que es Role y  Rolebind?
+
+Estos son manifiestos que se crean en cluster de kubernetes para administrar acceso a los mismo , cuando se habla de role significa darle permiso sobre un namespace 
+
+Roles (Roles): Los roles son un conjunto de reglas que definen permisos específicos en un espacio de nombres determinado. Pueden especificar acciones como crear, leer, actualizar o eliminar (CRUD) sobre diferentes tipos de recursos, como pods, servicios o despliegues.
+
+RoleBindings (Asociaciones de Roles): Las asociaciones de roles vinculan roles a usuarios, cuentas de servicio o grupos. Un RoleBinding asocia un role a una identidad específica, especificando qué permisos tiene esa identidad en el espacio de nombres correspondiente.
+
 
 ## Que es ClusterRole ClusterRoleBind?
 
