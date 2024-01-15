@@ -45,3 +45,28 @@ RoleBindings (Asociaciones de Roles): Las asociaciones de roles vinculan roles a
 ClusterRoles y ClusterRoleBindings: Además de los Roles y RoleBindings a nivel de espacio de nombres, Kubernetes también permite definir roles y asociaciones de roles a nivel de clúster. Los ClusterRoles son roles aplicables a nivel de clúster, y los ClusterRoleBindings vinculan estos roles a identidades a nivel de clúster.
 
 ![Diagrama](https://github.com/Andherson333333/k8s/blob/main/RBAC/imagenes/rbac-6.PNG)
+
+## Verificacion y practicas
+
+En esta seccion se va realiza la configuracion y verificacion de los roles y clusterRole , se van a realizar 2 configuraciones una con rol por defecto administrativo y otra con RBAC .
+
+### Rol administrativo o por defecto
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
