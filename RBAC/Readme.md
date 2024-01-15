@@ -72,7 +72,7 @@ En este caso solo se va pasar el archiv admin.conf a la estacion de trabajo
 - 3 Luego exportar el archivo para que kubectl trabaje `export KUBECONFIG=/home/soadmin/.kube/admin-config.yml`
 - 4 Verificar que funciono
 
-### Practica 2 RBAC
+#### Practica 2 RBAC
 
 En esta practica se va usar la filosofia de RBAC mediante certificados y permisos por role es decir namespace
 
