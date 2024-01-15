@@ -46,17 +46,15 @@ ClusterRoles y ClusterRoleBindings: Además de los Roles y RoleBindings a nivel 
 
 ![Diagrama](https://github.com/Andherson333333/k8s/blob/main/RBAC/imagenes/rbac-6.PNG)
 
-## Comandos de verificacion
 
-## Verificacion y practicas
+## Verificacion y aplicacion
 
 En esta seccion se va realiza la configuracion y verificacion de los roles y clusterRole , se van a realizar 2 configuraciones una con rol por defecto administrativo y otra con RBAC .
 
 Nota: Estas configuraciones se van a realizar en un entorno on prime no en una nube . Sin embargo el principio es el mismo .
 
-### Rol administrativo o por defecto
 
-#### Practica 1 default admin.conf
+### Metodo configuracion de administracion 1 default admin.conf
 
 En este caso solo se va pasar el archiv admin.conf a la estacion de trabajo 
 
@@ -72,7 +70,7 @@ En este caso solo se va pasar el archiv admin.conf a la estacion de trabajo
 - 3 Luego exportar el archivo para que kubectl trabaje `export KUBECONFIG=/home/soadmin/.kube/admin-config.yml`
 - 4 Verificar que funciono
 
-#### Practica 2 RBAC
+### Metodo a traves de RBAC
 
 En esta practica se va usar la filosofia de RBAC mediante certificados y permisos por role es decir namespace
 
