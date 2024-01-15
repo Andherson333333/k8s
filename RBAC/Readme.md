@@ -62,9 +62,10 @@ En este caso solo se va pasar el archiv admin.conf a la estacion de trabajo -
 
 - 1 Instalar kubectl en la maquina de trabajo
 - 2 buscar el archivo admin.conf ```find / -name admin.conf```
-- 3 enviar el archivo a la estacion trabajo ```scp admin.conf workstation@X.X.X.X:/Ruta/```
-- 4 Una ves verifcado el archivo exportar admin.conf a la ruta .kube/ con el nombre que quieras pero con terminacion yml ..
-- 5 Verificacion de que esta funcionando
+- 3 enviar el archivo a la estacion trabajo `scp admin.conf workstation@X.X.X.X:/Ruta/`
+- 4 Una ves verifcado el archivo admin.conf enviar a la ruta .kube/ con el nombre que quieras pero con terminacion yml ..
+- 5 Luego exportar el archivo para que kubectl trabaje `export KUBECONFIG=/home/soadmin/.kube/admin-config.yml`
+- 6 Verificar que funciono
 
 
 
