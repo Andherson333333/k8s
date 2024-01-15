@@ -18,6 +18,7 @@ En Kubernetes, se dice que no se crean usuarios directamente debido a su modelo 
 - Integración con Sistemas Externos
 - RBAC (Control de Acceso Basado en Roles)
 
+Estos certificacods y token se encuentran dentro del archivo admin.conf .
 
 ## Que es RBAC?
 
