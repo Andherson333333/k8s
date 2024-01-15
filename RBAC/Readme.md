@@ -56,42 +56,44 @@ Nota: Estas configuraciones se van a realizar en un entorno on prime no en una n
 
 ### Rol administrativo o por defecto
 
-#### Practica 1
+#### Practica 1 default admin.conf
 
 En este caso solo se va pasar el archiv admin.conf a la estacion de trabajo 
 
-Workstation (estacion de trabajo)
+** Cluster kubernetes (maquina que contiene cluster)
+
+- 1 buscar el archivo admin.conf `find / -name admin.conf`
+- 2 enviar el archivo a la estacion trabajo `scp admin.conf workstation@X.X.X.X:/Ruta/`
+
+** Workstation (estacion de trabajo)
 
 - 1 Instalar kubectl en la maquina de trabajo
-- 4 Una ves verifcado el archivo admin.conf enviar a la ruta .kube/ con el nombre que quieras pero con terminacion yml ..
-- 5 Luego exportar el archivo para que kubectl trabaje `export KUBECONFIG=/home/soadmin/.kube/admin-config.yml`
-- 6 Verificar que funciono
+- 2 Una ves verifcado el archivo admin.conf enviar a la ruta .kube/ con el nombre que quieras pero con terminacion yml ..
+- 3 Luego exportar el archivo para que kubectl trabaje `export KUBECONFIG=/home/soadmin/.kube/admin-config.yml`
+- 4 Verificar que funciono
 
-Cluster kubernetes (maquina que contiene cluster)
-
-- 2 buscar el archivo admin.conf `find / -name admin.conf`
-- 3 enviar el archivo a la estacion trabajo `scp admin.conf workstation@X.X.X.X:/Ruta/`
-
-
-
-### Practica 2
+### Practica 2 RBAC
 
 En esta practica se va usar la filosofia de RBAC mediante certificados y permisos por role es decir namespace
 
+** Cluster kubernetes (maquina que contiene cluster)
+
+
 - 1 Instalar kubectl en la maquina de trabajo
-- 2
-- 3
-- 4
-- 5
-- 6
-- 7
-- 8
-- 9
-- 10
+- 2 Recibir el certificado del solicitante 
+- 3 Firmar el el certificado  `openssl x509 -req -in soadmin.csr -CA /var/lib/k0s/pki/ca.crt -CAkey /var/lib/k0s/pki/ca.key -CAcreateserial -out soadmin.crt -days 50`
+- 4 Crear el manifiesto role y aplicarlo 
+- 5 Crear el manifiesto rolebind y asociarlo
 
+** Workstation (estacion de trabajo)
 
-
-
+- 1 Instalar kubectl en la cluster o maquina de admin
+- 2 Generar certificados mediante la herramienta openssl `openssl genrsa -out soadmin.key 2048`
+- 3 Generar certificado publico `openssl req -new -key soadmin.key -out soadmin.csr -subj "/CN=soadmin"`
+- 4 Enviar el certificado para la firma al cluster kubernetes al admin
+- 5 Recibir 2 archivos la llave firmada y el archivo config (en este caso ya el contexto esta agregado en el archivo config)
+- 6 Agregar las certificado al archiv `config kubectl config set-credentials soadmin --client-certificate=soadmin.crt --client-key=soadmin.key`
+- 7 Verificar el funcionamiento
 
 
 
