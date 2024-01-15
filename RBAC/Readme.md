@@ -60,12 +60,12 @@ Nota: Estas configuraciones se van a realizar en un entorno on prime no en una n
 
 En este caso solo se va pasar el archiv admin.conf a la estacion de trabajo 
 
-** Cluster kubernetes (maquina que contiene cluster)
+**Cluster kubernetes (maquina que contiene cluster)**
 
 - 1 buscar el archivo admin.conf `find / -name admin.conf`
 - 2 enviar el archivo a la estacion trabajo `scp admin.conf workstation@X.X.X.X:/Ruta/`
 
-** Workstation (estacion de trabajo)
+**Workstation (estacion de trabajo)**
 
 - 1 Instalar kubectl en la maquina de trabajo
 - 2 Una ves verifcado el archivo admin.conf enviar a la ruta .kube/ con el nombre que quieras pero con terminacion yml ..
@@ -76,8 +76,7 @@ En este caso solo se va pasar el archiv admin.conf a la estacion de trabajo
 
 En esta practica se va usar la filosofia de RBAC mediante certificados y permisos por role es decir namespace
 
-** Cluster kubernetes (maquina que contiene cluster)
-
+**Cluster kubernetes (maquina que contiene cluster)**
 
 - 1 Instalar kubectl en la maquina de trabajo
 - 2 Recibir el certificado del solicitante 
@@ -85,7 +84,7 @@ En esta practica se va usar la filosofia de RBAC mediante certificados y permiso
 - 4 Crear el manifiesto role y aplicarlo 
 - 5 Crear el manifiesto rolebind y asociarlo
 
-** Workstation (estacion de trabajo)
+**Workstation (estacion de trabajo)**
 
 - 1 Instalar kubectl en la cluster o maquina de admin
 - 2 Generar certificados mediante la herramienta openssl `openssl genrsa -out soadmin.key 2048`
