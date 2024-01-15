@@ -32,6 +32,7 @@ Roles (Roles): Los roles son un conjunto de reglas que definen permisos específ
 
 RoleBindings (Asociaciones de Roles): Las asociaciones de roles vinculan roles a usuarios, cuentas de servicio o grupos. Un RoleBinding asocia un role a una identidad específica, especificando qué permisos tiene esa identidad en el espacio de nombres correspondiente.
 
-
 ## Que es ClusterRole ClusterRoleBind?
+
+ClusterRoles y ClusterRoleBindings: Además de los Roles y RoleBindings a nivel de espacio de nombres, Kubernetes también permite definir roles y asociaciones de roles a nivel de clúster. Los ClusterRoles son roles aplicables a nivel de clúster, y los ClusterRoleBindings vinculan estos roles a identidades a nivel de clúster.
 
