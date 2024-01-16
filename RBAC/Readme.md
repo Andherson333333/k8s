@@ -61,7 +61,9 @@ En este caso solo se va pasar el archiv admin.conf a la estacion de trabajo
 **Cluster kubernetes (maquina que contiene cluster)**
 
 - 1 buscar el archivo admin.conf `find / -name admin.conf`
+  
   ![Diagrama](https://github.com/Andherson333333/k8s/blob/main/RBAC/imagenes/rbac-9.PNG)
+  
 - 2 enviar el archivo a la estacion trabajo `scp admin.conf workstation@X.X.X.X:/Ruta/`
 
 **Workstation (estacion de trabajo)**
