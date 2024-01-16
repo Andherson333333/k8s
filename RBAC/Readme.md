@@ -1,21 +1,35 @@
+## Índice de contenidos
+* [Que es kubectl](#item1)
+* [Que es admin.conf?](#item2)
+* [Que es kubeconfig?](#item3)
+* [Creacion de usuarios en kubernetes?](#item4)
+* [Que es RBAC?](#item5)
+* [Que es Role y  Rolebind?](#item6)
+* [Que es ClusterRole ClusterRoleBind?](#item7)
+* [Verificacion y aplicacion](#item8)
+
+<a name="item1"></a>
 ## Que es kubectl?
 
 Es una herramienta de linea de comandos que se encarga de interactuar con el cluster de kubernetes, cabe destacar que es una herramienta que se instala en el lado del cliente 
 
 ![Diagrama](https://github.com/Andherson333333/k8s/blob/main/RBAC/imagenes/rbac-3.PNG)
 
+<a name="item2"></a>
 ## Que es admin.conf?
 
 El archivo admin.conf es un archivo de configuración de Kubernetes que contiene información sobre cómo conectarse al clúster de Kubernetes y las credenciales necesarias para realizar operaciones administrativas. Este archivo puede varia en  diferentes ubicaciones dependiendo el tipo de instalacion distro ect . Para encontralo puede usar este comando `find / -name admin.conf` en linux
 
 ![Diagrama](https://github.com/Andherson333333/k8s/blob/main/RBAC/imagenes/rbac-4.PNG)
 
+<a name="item3"></a>
 ## Que es kubeconfig?
 
 Kubeconfig es un archivo de configuración fundamental en Kubernetes que especifica cómo la herramienta kubectl se comunica con un clúster de Kubernetes. En términos sencillos, kubeconfig y admin.conf se refieren al mismo archivo. Aunque este archivo puede ubicarse en cualquier lugar, por convención, kubectl lo utiliza comúnmente desde ~/.kube/config. Es posible modificar la ubicación mediante la exportación de una variable en sistemas basados en Linux
 
 ![Diagrama](https://github.com/Andherson333333/k8s/blob/main/RBAC/imagenes/rbac-2.PNG)
 
+<a name="item4"></a>
 ## Creacion de usuarios en kubernetes?
 
 En Kubernetes, se dice que no se crean usuarios directamente debido a su modelo de autenticación y autorización. En lugar de gestionar usuarios a nivel de Kubernetes, el enfoque principal se centra en la autenticación a través de identidades y tokens
@@ -26,10 +40,12 @@ En Kubernetes, se dice que no se crean usuarios directamente debido a su modelo 
 
 Estos certificacods y token se encuentran dentro del archivo admin.conf .
 
+<a name="item5"></a>
 ## Que es RBAC?
 
 RBAC, o Control de Acceso Basado en Roles (Role-Based Access Control), es un sistema de gestión de acceso que se utiliza en Kubernetes para definir y gestionar permisos de acceso a los recursos del clúster. Proporciona un marco para controlar qué usuarios, cuentas de servicio o procesos pueden realizar operaciones específicas en el clúster.
 
+<a name="item6"></a>
 ## Que es Role y  Rolebind?
 
 Estos son manifiestos que se crean en cluster de kubernetes para administrar acceso a los mismo , cuando se habla de role significa darle permiso sobre un namespace 
@@ -40,13 +56,14 @@ RoleBindings (Asociaciones de Roles): Las asociaciones de roles vinculan roles a
 
 ![Diagrama](https://github.com/Andherson333333/k8s/blob/main/RBAC/imagenes/rbac-5.PNG)
 
+<a name="item7"></a>
 ## Que es ClusterRole ClusterRoleBind?
 
 ClusterRoles y ClusterRoleBindings: Además de los Roles y RoleBindings a nivel de espacio de nombres, Kubernetes también permite definir roles y asociaciones de roles a nivel de clúster. Los ClusterRoles son roles aplicables a nivel de clúster, y los ClusterRoleBindings vinculan estos roles a identidades a nivel de clúster.
 
 ![Diagrama](https://github.com/Andherson333333/k8s/blob/main/RBAC/imagenes/rbac-6.PNG)
 
-
+<a name="item1"></a>
 ## Verificacion y aplicacion
 
 En esta seccion se va realiza la configuracion y verificacion de los roles y clusterRole , se van a realizar 2 configuraciones una con rol por defecto administrativo y otra con RBAC .
