@@ -1,0 +1,20 @@
+apiVersion: v1
+clusters:
+- cluster:
+    certificate-authority-data: xxxxxxxxxxxxxx
+    server: https://192.168.1.6:6443
+  name: local
+contexts:
+- context:
+    cluster: local
+    namespace: test
+    user: soadmin
+  name: soadmin
+current-context: soadmin
+kind: Config
+preferences: {}
+users:
+- name: soadmin
+  user:
+    client-certificate: /home/soadmin/soadmin.crt
+    client-key: /home/soadmin/soadmin.key
