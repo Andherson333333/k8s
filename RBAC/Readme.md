@@ -86,7 +86,7 @@ En este caso solo se va pasar el archiv admin.conf a la estacion de trabajo
 
 ### Metodo a traves de RBAC
 
-En esta practica se va usar la filosofia de RBAC mediante certificados y permisos por role es decir namespace
+En esta practica se va usar la filosofia de RBAC mediante certificados y permisos por role es decir namespace. Se creara un namespace llamado test , donde el usuario soadmin solo podra crear pod en este namespace y no tendra mas permisos en el cluster
 
 **Cluster kubernetes (maquina que contiene cluster)**
 
@@ -111,14 +111,21 @@ En esta practica se va usar la filosofia de RBAC mediante certificados y permiso
 
 - 1 Instalar kubectl en la cluster o maquina de admin
 - 2 Generar certificados mediante la herramienta openssl `openssl genrsa -out soadmin.key 2048`
-   ![Diagrama]()
 - 3 Generar certificado publico `openssl req -new -key soadmin.key -out soadmin.csr -subj "/CN=soadmin"`
-   ![Diagrama]()
+  
+   ![Diagrama](https://github.com/Andherson333333/k8s/blob/main/RBAC/imagenes/rbac-19.PNG)
+  
 - 4 Enviar el certificado para la firma al cluster kubernetes al admin
 - 5 Recibir 2 archivos la llave firmada y el archivo config (en este caso ya el contexto esta agregado en el archivo config)
-   ![Diagrama]()
-- 6 Agregar las certificado al archiv `config kubectl config set-credentials soadmin --client-certificate=soadmin.crt --client-key=soadmin.key`
-- 7 Verificar el funcionamiento
+- 6 Enviar el archivo config a la ubicacion de .kube 
+  
+   ![Diagrama](https://github.com/Andherson333333/k8s/blob/main/RBAC/imagenes/rbac-20.PNG)
+  
+- 7 Agregar las certificado al archiv `config kubectl config set-credentials soadmin --client-certificate=soadmin.crt --client-key=soadmin.key`
+
+ ![Diagrama](https://github.com/Andherson333333/k8s/blob/main/RBAC/imagenes/rbac-21.PNG)
+
+- 8 Verificar el funcionamiento
    ![Diagrama]()
 
 
