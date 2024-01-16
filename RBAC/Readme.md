@@ -92,12 +92,20 @@ En esta practica se va usar la filosofia de RBAC mediante certificados y permiso
 
 - 1 Instalar kubectl en la maquina de trabajo
 - 2 Recibir el certificado del solicitante
-- ![Diagrama]()
+- 
+ ![Diagrama](https://github.com/Andherson333333/k8s/blob/main/RBAC/imagenes/rbac-15%20-%20copia.PNG)
+
 - 3 Firmar el el certificado  `openssl x509 -req -in soadmin.csr -CA /var/lib/k0s/pki/ca.crt -CAkey /var/lib/k0s/pki/ca.key -CAcreateserial -out soadmin.crt -days 50`
-  ![Diagrama]()
+- 
+  ![Diagrama](https://github.com/Andherson333333/k8s/blob/main/RBAC/imagenes/rbac-16%20-%20copia.PNG)
+  
 - 4 Crear el manifiesto role y rolebind
+- 
+  ![Diagrama](https://github.com/Andherson333333/k8s/blob/main/RBAC/imagenes/rbac-17.PNG)
+  
 - 5 Aplicar ambos manifiestos
-  ![Diagrama]()
+  
+  ![Diagrama](https://github.com/Andherson333333/k8s/blob/main/RBAC/imagenes/rbac-18.PNG)
 
 **Workstation (estacion de trabajo)**
 
