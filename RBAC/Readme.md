@@ -126,7 +126,7 @@ En esta practica se va usar la filosofia de RBAC mediante certificados y permiso
  ![Diagrama](https://github.com/Andherson333333/k8s/blob/main/RBAC/imagenes/rbac-21.PNG)
 
 - 8 Verificar el funcionamiento
-   ![Diagrama]()
+   ![Diagrama](https://github.com/Andherson333333/k8s/blob/main/RBAC/imagenes/rba-23.PNG)
 
 
 
