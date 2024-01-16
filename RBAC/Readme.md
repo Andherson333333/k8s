@@ -63,7 +63,7 @@ ClusterRoles y ClusterRoleBindings: Además de los Roles y RoleBindings a nivel 
 
 ![Diagrama](https://github.com/Andherson333333/k8s/blob/main/RBAC/imagenes/rbac-6.PNG)
 
-<a name="item1"></a>
+<a name="item8"></a>
 ## Verificacion y aplicacion
 
 En esta seccion se va realiza la configuracion y verificacion de los roles y clusterRole , se van a realizar 2 configuraciones una con rol por defecto administrativo y otra con RBAC .
