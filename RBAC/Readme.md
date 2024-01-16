@@ -91,10 +91,13 @@ En esta practica se va usar la filosofia de RBAC mediante certificados y permiso
 **Cluster kubernetes (maquina que contiene cluster)**
 
 - 1 Instalar kubectl en la maquina de trabajo
-- 2 Recibir el certificado del solicitante 
+- 2 Recibir el certificado del solicitante
+- ![Diagrama]()
 - 3 Firmar el el certificado  `openssl x509 -req -in soadmin.csr -CA /var/lib/k0s/pki/ca.crt -CAkey /var/lib/k0s/pki/ca.key -CAcreateserial -out soadmin.crt -days 50`
-- 4 Crear el manifiesto role y aplicarlo 
-- 5 Crear el manifiesto rolebind y asociarlo
+  ![Diagrama]()
+- 4 Crear el manifiesto role y rolebind
+- 5 Aplicar ambos manifiestos
+  ![Diagrama]()
 
 **Workstation (estacion de trabajo)**
 
