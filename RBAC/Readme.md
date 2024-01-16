@@ -69,12 +69,20 @@ En este caso solo se va pasar el archiv admin.conf a la estacion de trabajo
 **Workstation (estacion de trabajo)**
 
 - 1 Instalar kubectl en la maquina de trabajo
-  ![Diagrama]()
+  
+  ![Diagrama](https://github.com/Andherson333333/k8s/blob/main/RBAC/imagenes/rbac-11.PNG)
+  
 - 2 Una ves verifcado el archivo admin.conf enviar a la ruta .kube/ con el nombre que quieras pero con terminacion yml ..
+  
+  ![Diagrama](https://github.com/Andherson333333/k8s/blob/main/RBAC/imagenes/rbac-12.PNG)
+  
 - 3 Luego exportar el archivo para que kubectl trabaje `export KUBECONFIG=/home/soadmin/.kube/admin-config.yml`
-   ![Diagrama]()
+  
+   ![Diagrama](https://github.com/Andherson333333/k8s/blob/main/RBAC/imagenes/rbac-13.PNG)
+  
 - 4 Verificar que funciono
-   ![Diagrama]()
+  
+   ![Diagrama](https://github.com/Andherson333333/k8s/blob/main/RBAC/imagenes/rbac-14.PNG)
 
 ### Metodo a traves de RBAC
 
