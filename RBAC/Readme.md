@@ -145,6 +145,8 @@ En esta practica se va usar la filosofia de RBAC mediante certificados y permiso
 - 8 Verificar el funcionamiento
    ![Diagrama](https://github.com/Andherson333333/k8s/blob/main/RBAC/imagenes/rba-23.PNG)
 
+### Clusterrole y clusterolebind
+
 
 
 
