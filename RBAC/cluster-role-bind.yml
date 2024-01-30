@@ -4,7 +4,7 @@ metadata:
   name: cluster-read-only-binding
 subjects:
 - kind: User
-  name: cluster
+  name: soadmin
   apiGroup: rbac.authorization.k8s.io
 roleRef:
   kind: ClusterRole
