@@ -74,7 +74,7 @@ Entonces, un Pod que utiliza un Service Account en particular hereda los permiso
 <a name="item9"></a>
 ## Verificacion y aplicacion
 
-En esta seccion se va realiza la configuracion y verificacion de los roles y clusterRole , se van a realizar 2 configuraciones una con rol por defecto administrativo y otra con RBAC .
+En esta seccion se va realiza la configuracion y verificacion de los diferentes metodos de RBAC role, clusterole y service-account
 
 Nota: Estas configuraciones se van a realizar en un entorno on prime no en una nube . Sin embargo el principio es el mismo .
 
