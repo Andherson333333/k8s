@@ -6,7 +6,8 @@
 * [Que es RBAC?](#item5)
 * [Que es Role y  Rolebind?](#item6)
 * [Que es ClusterRole ClusterRoleBind?](#item7)
-* [Verificacion y aplicacion](#item8)
+* [Service account](#item8)
+* [Verificacion y aplicacion](#item9)
 
 <a name="item1"></a>
 ## Que es kubectl?
@@ -64,6 +65,13 @@ ClusterRoles y ClusterRoleBindings: Además de los Roles y RoleBindings a nivel 
 ![Diagrama](https://github.com/Andherson333333/k8s/blob/main/RBAC/imagenes/rbac-6.PNG)
 
 <a name="item8"></a>
+## Service account 
+
+Un Service Account en Kubernetes se utiliza para proporcionar una identidad a los Pods y, al hacerlo, les concede permisos para interactuar con el clúster de Kubernetes. Los Service Accounts pueden tener asociados Roles o ClusterRoles que especifican los permisos que tienen en términos de acciones permitidas sobre recursos en el clúster.
+
+Entonces, un Pod que utiliza un Service Account en particular hereda los permisos asociados con ese Service Account. Esto incluye la capacidad de crear, modificar y eliminar recursos en el clúster, dependiendo de los roles o cluster roles asignados a ese Service Account.
+
+<a name="item9"></a>
 ## Verificacion y aplicacion
 
 En esta seccion se va realiza la configuracion y verificacion de los roles y clusterRole , se van a realizar 2 configuraciones una con rol por defecto administrativo y otra con RBAC .
