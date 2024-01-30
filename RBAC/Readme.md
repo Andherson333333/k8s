@@ -150,11 +150,27 @@ En esta practica se va usar la filosofia de RBAC mediante certificados y permiso
 Clusterole como se meciono anteriormente se hace para dar permisos a todos el cluster , como ya tenemos el archivo config y firmas configuradas solo hace falta borrar el role, rolebinding y aplicar el clusterole,clusterrolebinding en nuesto kubernetes.
 
 - 1 Borrar el role y rolebinding en nuesto kubernetes
+  
 `kubectl delete -f role-pod.yml`
+![Diagrama]()
+
 `kubectl delete -f rolebind-pod.yml`
 
+![Diagrama]()
+
 - 2 Aplicar los nuevos manifiesto de clusterrole y clusterrolebinding
-  
+
+`kubectl apply -f cluster-role.yml`
+
+![Diagrama]()
+
+`kubectl apply -f cluster-role-bind.yml`
+
+ ![Diagrama]()
+
+Veificamos 
+
+![Diagrama]()
 
 ### Service account 
 
