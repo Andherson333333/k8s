@@ -152,25 +152,22 @@ Clusterole como se meciono anteriormente se hace para dar permisos a todos el cl
 - 1 Borrar el role y rolebinding en nuesto kubernetes
   
 `kubectl delete -f role-pod.yml`
-![Diagrama]()
 
 `kubectl delete -f rolebind-pod.yml`
-
-![Diagrama]()
 
 - 2 Aplicar los nuevos manifiesto de clusterrole y clusterrolebinding
 
 `kubectl apply -f cluster-role.yml`
 
-![Diagrama]()
+![Diagrama](https://github.com/Andherson333333/k8s/blob/main/RBAC/imagenes/cluster-role.PNG)
 
 `kubectl apply -f cluster-role-bind.yml`
 
- ![Diagrama]()
+ ![Diagrama](https://github.com/Andherson333333/k8s/blob/main/RBAC/imagenes/cluster-biding.PNG)
 
 Veificamos 
 
-![Diagrama]()
+![Diagrama](https://github.com/Andherson333333/k8s/blob/main/RBAC/imagenes/cluster-ns.PNG)
 
 ### Service account 
 
