@@ -201,10 +201,19 @@ La creacion de recursos se realizara mediantes los manifiestos
 
 - 5 Verificar si el pod recibe permisos de la API de Kubernetes , para hacer esto ingresaremos en el pod y lanzaremos diferentes comandos para verificar el funcionamiento del mismo.
   
-    - 5.1 Verificacion de los certificacods dentro del pod
-    - 5.2 exportan el token para realizar la prueba de conectividad
-    - 5.3 realizar la conecion mediante el comando curl
-    - 5.4 Verificar permiso del token
+    - 5.1 Verificacion de los certificacods dentro del pod`cd /var/run/secrets/kubernetes.io/serviceaccount/token`
+      
+       ![Diagrama](https://github.com/Andherson333333/k8s/blob/main/RBAC/imagenes/service-token.PNG)
+      
+    - 5.2 exportan el token para realizar la prueba de conectividad`TOKEN=$(cat /var/run/secrets/kubernetes.io/serviceaccount/token)`
+     
+       ![Diagrama](https://github.com/Andherson333333/k8s/blob/main/RBAC/imagenes/service-token-1.PNG)
+      
+    - 5.3 realizar la conecion mediante el comando curl`curl https://kubernetes -k --header "Authorization: Bearer $TOKEN"`
+      
+     ![Diagrama](https://github.com/Andherson333333/k8s/blob/main/RBAC/imagenes/service-token-3.PNG)
+
+    - 5.4 Verificar permiso del token`curl https://kubernetes/api/v1/namespaces/default/pods -k --header "Authorization: Bearer $TOKEN" | jq '.items[].metadata.name'`
       
       ![Diagrama](https://github.com/Andherson333333/k8s/blob/main/RBAC/imagenes/service-verificacion.PNG)
 
