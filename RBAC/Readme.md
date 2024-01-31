@@ -179,6 +179,14 @@ Veificamos
 
 ### Service account 
 
+Es una habilidad que se le entrega a los pod para poder usar kubernetes para realizar diferentes tareas en el cluster de kubernetes 
+
+La creacion de recursos se realizara mediantes los manifiestos
+
+- 1 Crear el pod.
+- 2 Crear el role o clusterrole.
+- 3 Crear el rolebinding o clusterrolebinding.
+- 4 Verificar si el pod recibe permisos de la API de Kubernetes.
 
 
 
