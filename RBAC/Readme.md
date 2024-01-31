@@ -193,15 +193,20 @@ La creacion de recursos se realizara mediantes los manifiestos
 
 - 3 Crear el role o clusterrole.`kubectl apply -f service-account-role.yml`
   
-![Diagrama]()
+![Diagrama](https://github.com/Andherson333333/k8s/blob/main/RBAC/imagenes/service-role.PNG)
 
 - 4 Crear el rolebinding o clusterrolebinding.`kubectl apply -f service-account-rolebinding.yml`
   
- ![Diagrama]()
+ ![Diagrama](https://github.com/Andherson333333/k8s/blob/main/RBAC/imagenes/service-rolebiding.PNG)
 
-- 5 Verificar si el pod recibe permisos de la API de Kubernetes.``
+- 5 Verificar si el pod recibe permisos de la API de Kubernetes , para hacer esto ingresaremos en el pod y lanzaremos diferentes comandos para verificar el funcionamiento del mismo.
   
-![Diagrama](https://github.com/Andherson333333/k8s/blob/main/RBAC/imagenes/service-verificacion.PNG)
+    - 5.1 Verificacion de los certificacods dentro del pod
+    - 5.2 exportan el token para realizar la prueba de conectividad
+    - 5.3 realizar la conecion mediante el comando curl
+    - 5.4 Verificar permiso del token
+      
+      ![Diagrama](https://github.com/Andherson333333/k8s/blob/main/RBAC/imagenes/service-verificacion.PNG)
 
 
 
