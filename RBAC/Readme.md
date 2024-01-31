@@ -183,14 +183,16 @@ Es una habilidad que se le entrega a los pod para poder usar kubernetes para rea
 
 La creacion de recursos se realizara mediantes los manifiestos
 
-- 1 Crear el pod.`kubectl apply -f``
-- ![Diagrama]()
-- 2 Crear el role o clusterrole.``kubectl apply -f`
-- ![Diagrama]()
-- 3 Crear el rolebinding o clusterrolebinding.``kubectl apply -f`
-- ![Diagrama]()
-- 4 Verificar si el pod recibe permisos de la API de Kubernetes.``
+- 1 Crear el service account `kubectl apply -f service-account.yml`
+![Diagrama](https://github.com/Andherson333333/k8s/blob/main/RBAC/imagenes/service-account.PNG)
+- 2Crear el pod.`kubectl apply -f service-account-pod.yml`
+ ![Diagrama](https://github.com/Andherson333333/k8s/blob/main/RBAC/imagenes/service-pod.PNG)
+- 3 Crear el role o clusterrole.`kubectl apply -f service-account-role.yml`
 ![Diagrama]()
+- 4 Crear el rolebinding o clusterrolebinding.`kubectl apply -f service-account-rolebinding.yml`
+ ![Diagrama]()
+- 5 Verificar si el pod recibe permisos de la API de Kubernetes.``
+![Diagrama](https://github.com/Andherson333333/k8s/blob/main/RBAC/imagenes/service-verificacion.PNG)
 
 
 
