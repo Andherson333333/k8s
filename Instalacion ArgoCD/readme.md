@@ -2,4 +2,4 @@
 
 ## Instalacion
 
-## Uso de ArgoCd
+## Uso de ArgoCD
