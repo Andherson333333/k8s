@@ -9,16 +9,16 @@ Permitiendo así a los desarrolladores realizar cambios en la aplicación con so
 
   ## Hay 3 formas de instalar argocd
 
-  - 1 manifiestos
-
+ - 1 manifiestos
+```
       kubectl create namespace argocd
       kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
-
-  - 2 helm
-
+```
+ - 2 helm
+```
     helm repo add argo https://argoproj.github.io/argo-helm
     helm install my-argocd-apps argo/argocd-apps --version 1.6.1
-
+```
   - 3 operator
 
   
@@ -26,31 +26,31 @@ Permitiendo así a los desarrolladores realizar cambios en la aplicación con so
 
  Al crear un argocd tiene 7 micro servicios , que es igual a 7 pod cada uno de ellos asociados a un servicio
 
-argocd-application-controller-0:
+`argocd-application-controller-0:`
 Rol: Controla y gestiona las aplicaciones dentro de ArgoCD.
 Función: Supervisa y maneja la implementación, actualización y eliminación de aplicaciones en el clúster de Kubernetes.
   
-argocd-applicationset-controller-64c77cff5d-tkcs2:
+`argocd-applicationset-controller-64c77cff5d-tkcs2:`
 Rol: Controla conjuntos de aplicaciones en ArgoCD.
 Función: Permite gestionar conjuntos de aplicaciones, facilitando la implementación y gestión de aplicaciones a escala.
 
-argocd-dex-server:
+`argocd-dex-server:`
 Rol: Servidor Dex para autenticación y autorización.
 Función: Proporciona servicios de autenticación y autorización para usuarios y servicios en ArgoCD.
   
-argocd-notifications-controller:
+`argocd-notifications-controller:`
 Rol: Controlador de notificaciones para eventos relacionados con aplicaciones.
 Función: Gestiona notificaciones para eventos específicos de aplicaciones, permitiendo a los usuarios recibir alertas sobre cambios importantes.
   
-argocd-redis:
+`argocd-redis:`
 Rol: Ejecuta el servidor Redis para almacenamiento temporal.
 Función: Almacena datos temporales y proporciona un almacenamiento efímero para ciertos procesos en ArgoCD.
   
-argocd-repo-server:
+`argocd-repo-server:`
 Rol: Servidor de repositorios para gestionar definiciones de aplicaciones.
 Función: Gestiona el almacenamiento y recuperación de las definiciones de aplicaciones almacenadas en el repositorio Git.
   
-argocd-server:
+`argocd-server:`
  Rol: Servidor principal de ArgoCD.
 Función: Coordina las operaciones en el clúster de Kubernetes y proporciona la interfaz de usuario web para gestionar y desplegar aplicaciones.
 Instalacion argocd
