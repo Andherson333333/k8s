@@ -1,6 +1,8 @@
 ## ¿Que es gitops ?
 
 GitOps es un enfoque para el despliegue de infraestructuras y aplicaciones que aprovecha Git, un popular sistema de control de versiones distribuido. En GitOps, la infraestructura se define como código y se almacena en un repositorio Git. Los cambios en el código activan unas acciones automatizadas que despliegan esos cambios en el entorno de destino, lo que facilita el mantenimiento y la coherencia en los entornos de desarrollo, pruebas y producción.  
+
+![Diagrama]()
  
 ## ¿Que es argocd ?
 ArgoCD es una herramienta que nos permite adoptar metodologías GitOps para el despliegue continuo de aplicaciones en clústers de kubernetes.
@@ -59,5 +61,16 @@ Instalacion argocd
 
 kubectl patch svc argocd-server -n argocd -p '{"spec": {"type": "NodePort"}}'
 kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d; echo
+
+## Verificacion 
+
+En este apartado verificaremos la instalacion si funciona , asi que vamos a realizar una serie de comandos 
+
+```
+      kubectl create namespace argocd
+      kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+```
+
+![Diagrama]()
 
 
