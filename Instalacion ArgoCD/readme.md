@@ -68,7 +68,7 @@ Rol: Servidor principal de ArgoCD.
 Función: Coordina las operaciones en el clúster de Kubernetes y proporciona la interfaz de usuario web para gestionar y desplegar aplicaciones.
 Instalacion argocd
 
-![Diagrama]()
+![Diagrama](https://github.com/Andherson333333/k8s/blob/main/Instalacion%20ArgoCD/imagenes/argocd-archictectura.PNG)
 
 <a name="item5"></a>
 ## Configuracion para iniciar 
@@ -92,6 +92,6 @@ kubectl get svc -n argocd
 kubectl get pod -n argocd
 ```
 
-![Diagrama]()
+![Diagrama](https://github.com/Andherson333333/k8s/blob/main/Instalacion%20ArgoCD/imagenes/argocd-3.PNG)
 
 
