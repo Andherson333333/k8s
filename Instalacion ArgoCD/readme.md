@@ -6,15 +6,12 @@
 * [Configuracion para iniciar ](#item5)
 * [Verificacion](#item6)
   
-
-
-
 <a name="item1"></a>
 ## ¿Que es gitops ?
 
 GitOps es un enfoque para el despliegue de infraestructuras y aplicaciones que aprovecha Git, un popular sistema de control de versiones distribuido. En GitOps, la infraestructura se define como código y se almacena en un repositorio Git. Los cambios en el código activan unas acciones automatizadas que despliegan esos cambios en el entorno de destino, lo que facilita el mantenimiento y la coherencia en los entornos de desarrollo, pruebas y producción.  
 
-![Diagrama]()
+![Diagrama](https://github.com/Andherson333333/k8s/blob/main/Instalacion%20ArgoCD/imagenes/argocd-sync-flow.png)
 
  <a name="item2"></a>
 ## ¿Que es argocd ?
@@ -70,6 +67,8 @@ Función: Gestiona el almacenamiento y recuperación de las definiciones de apli
 Rol: Servidor principal de ArgoCD.
 Función: Coordina las operaciones en el clúster de Kubernetes y proporciona la interfaz de usuario web para gestionar y desplegar aplicaciones.
 Instalacion argocd
+
+![Diagrama]()
 
 <a name="item5"></a>
 ## Configuracion para iniciar 
