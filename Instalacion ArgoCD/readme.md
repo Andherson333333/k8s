@@ -51,7 +51,7 @@ Rol: Servidor de repositorios para gestionar definiciones de aplicaciones.
 Función: Gestiona el almacenamiento y recuperación de las definiciones de aplicaciones almacenadas en el repositorio Git.
   
 `argocd-server:`
- Rol: Servidor principal de ArgoCD.
+Rol: Servidor principal de ArgoCD.
 Función: Coordina las operaciones en el clúster de Kubernetes y proporciona la interfaz de usuario web para gestionar y desplegar aplicaciones.
 Instalacion argocd
 
