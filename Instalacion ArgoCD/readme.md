@@ -1,15 +1,29 @@
+## Índice de contenidos
+* [¿Que es gitops?](#item1)
+* [ ¿Que es argocd ??](#item2)
+* [Hay 3 formas de instalar argocd](#item3)
+* [Arquictectura de argocd](#item4)
+* [Configuracion para iniciar ](#item5)
+* [Verificacion](#item6)
+  
+
+
+
+<a name="item1"></a>
 ## ¿Que es gitops ?
 
 GitOps es un enfoque para el despliegue de infraestructuras y aplicaciones que aprovecha Git, un popular sistema de control de versiones distribuido. En GitOps, la infraestructura se define como código y se almacena en un repositorio Git. Los cambios en el código activan unas acciones automatizadas que despliegan esos cambios en el entorno de destino, lo que facilita el mantenimiento y la coherencia en los entornos de desarrollo, pruebas y producción.  
 
 ![Diagrama]()
- 
+
+ <a name="item2"></a>
 ## ¿Que es argocd ?
 ArgoCD es una herramienta que nos permite adoptar metodologías GitOps para el despliegue continuo de aplicaciones en clústers de kubernetes.
 La principal característica es que ArgoCD sincroniza el estado de las aplicaciones desplegadas con sus respectivos manifiestos declarados en git.
 Permitiendo así a los desarrolladores realizar cambios en la aplicación con solo modificar el contenido de git, ya sea con commits a ramas de desarrollo o modificando. Una vez modificado el código en git, ArgoCD detecta, mediante webhook o comprobación periódica cada 3 minutos, que ha habido cambios en los manifiestos de las aplicaciones. Seguidamente, compara los manifiestos declarados en git con los que hay aplicados en los clústers y actualiza estos últimos hasta sincronizarlos.
 
-  ## Hay 3 formas de instalar argocd
+<a name="item3"></a>
+## Hay 3 formas de instalar argocd
 
  - 1 manifiestos
 ```
@@ -23,7 +37,7 @@ Permitiendo así a los desarrolladores realizar cambios en la aplicación con so
 ```
   - 3 operator
 
-  
+<a name="item4"></a>
 ## Arquictectura de argocd
 
  Al crear un argocd tiene 7 micro servicios , que es igual a 7 pod cada uno de ellos asociados a un servicio
@@ -57,6 +71,7 @@ Rol: Servidor principal de ArgoCD.
 Función: Coordina las operaciones en el clúster de Kubernetes y proporciona la interfaz de usuario web para gestionar y desplegar aplicaciones.
 Instalacion argocd
 
+<a name="item5"></a>
 ## Configuracion para iniciar 
 
 - Pasar el service para poder logiar de forma web UI
@@ -68,6 +83,7 @@ kubectl patch svc argocd-server -n argocd -p '{"spec": {"type": "NodePort"}}'
 kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d; echo
 ```
 
+<a name="item6"></a>
 ## Verificacion 
 
 En este apartado verificaremos la instalacion si funciona , asi que vamos a realizar una serie de comandos 
