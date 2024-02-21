@@ -92,6 +92,6 @@ kubectl get svc -n argocd
 kubectl get pod -n argocd
 ```
 
-![Diagrama](https://github.com/Andherson333333/k8s/blob/main/Instalacion%20ArgoCD/imagenes/argocd-3.PNG)
+![Diagrama](https://github.com/Andherson333333/k8s/blob/main/Instalacion%20ArgoCD/imagenes/argocd-4.PNG)
 
 
