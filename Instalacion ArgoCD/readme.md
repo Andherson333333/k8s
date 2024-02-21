@@ -59,16 +59,22 @@ Instalacion argocd
 
 ## Configuracion para iniciar 
 
+- Pasar el service para poder logiar de forma web UI
+```
 kubectl patch svc argocd-server -n argocd -p '{"spec": {"type": "NodePort"}}'
+```
+- Conseguir clave del usuario admin
+ ```
 kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d; echo
+```
 
 ## Verificacion 
 
 En este apartado verificaremos la instalacion si funciona , asi que vamos a realizar una serie de comandos 
 
 ```
-      kubectl create namespace argocd
-      kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+kubectl get svc -n argocd
+kubectl get pod -n argocd
 ```
 
 ![Diagrama]()
