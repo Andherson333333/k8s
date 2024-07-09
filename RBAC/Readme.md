@@ -215,7 +215,7 @@ La creacion de recursos se realizara mediantes los manifiestos
 
     - 5.4 Verificar permiso del token`curl https://kubernetes/api/v1/namespaces/default/pods -k --header "Authorization: Bearer $TOKEN" | jq '.items[].metadata.name'`
       
-      ![Diagrama](https://github.com/Andherson333333/k8s/blob/main/RBAC/imagenes/service-token-4.PNG)
+      ![Diagrama](https://github.com/Andherson333333/k8s/blob/main/RBAC/imagenes/service-token-4.PNG) 
 
 
 
