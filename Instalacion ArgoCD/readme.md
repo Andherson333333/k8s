@@ -1,97 +1,86 @@
+# ArgoCD: Implementación de GitOps en Kubernetes
+
+## Descripción
+
+Este repositorio contiene información y guías sobre ArgoCD, una herramienta poderosa para implementar GitOps en clústeres de Kubernetes. ArgoCD facilita la gestión y despliegue continuo de aplicaciones, permitiendo sincronizar automáticamente el estado de las aplicaciones en Kubernetes con las definiciones almacenadas en repositorios Git. Esta guía cubre los conceptos básicos de GitOps, la instalación y configuración de ArgoCD, y proporciona una visión general de su arquitectura y funcionamiento.
+
 ## Índice de contenidos
-* [¿Que es gitops?](#item1)
-* [ ¿Que es argocd ??](#item2)
-* [Hay 3 formas de instalar argocd](#item3)
-* [Arquictectura de argocd](#item4)
-* [Configuracion para iniciar ](#item5)
-* [Verificacion](#item6)
-  
-<a name="item1"></a>
-## ¿Que es gitops ?
+1. [¿Qué es GitOps?](#qué-es-gitops)
+2. [¿Qué es ArgoCD?](#qué-es-argocd)
+3. [Formas de instalar ArgoCD](#formas-de-instalar-argocd)
+4. [Arquitectura de ArgoCD](#arquitectura-de-argocd)
+5. [Configuración inicial](#configuración-inicial)
+6. [Verificación de la instalación](#verificación-de-la-instalación)
 
-GitOps es un enfoque para el despliegue de infraestructuras y aplicaciones que aprovecha Git, un popular sistema de control de versiones distribuido. En GitOps, la infraestructura se define como código y se almacena en un repositorio Git. Los cambios en el código activan unas acciones automatizadas que despliegan esos cambios en el entorno de destino, lo que facilita el mantenimiento y la coherencia en los entornos de desarrollo, pruebas y producción.  
+## ¿Qué es GitOps?
 
-![Diagrama](https://github.com/Andherson333333/k8s/blob/main/Instalacion%20ArgoCD/imagenes/argocd-sync-flow.png)
+GitOps es un enfoque para el despliegue de infraestructuras y aplicaciones que aprovecha Git como sistema de control de versiones distribuido. En GitOps, la infraestructura se define como código y se almacena en un repositorio Git. Los cambios en el código activan acciones automatizadas que despliegan esos cambios en el entorno de destino, facilitando el mantenimiento y la coherencia en los entornos de desarrollo, pruebas y producción.
 
- <a name="item2"></a>
-## ¿Que es argocd ?
-ArgoCD es una herramienta que nos permite adoptar metodologías GitOps para el despliegue continuo de aplicaciones en clústers de kubernetes.
-La principal característica es que ArgoCD sincroniza el estado de las aplicaciones desplegadas con sus respectivos manifiestos declarados en git.
-Permitiendo así a los desarrolladores realizar cambios en la aplicación con solo modificar el contenido de git, ya sea con commits a ramas de desarrollo o modificando. Una vez modificado el código en git, ArgoCD detecta, mediante webhook o comprobación periódica cada 3 minutos, que ha habido cambios en los manifiestos de las aplicaciones. Seguidamente, compara los manifiestos declarados en git con los que hay aplicados en los clústers y actualiza estos últimos hasta sincronizarlos.
+![Diagrama GitOps](https://github.com/Andherson333333/k8s/blob/main/Instalacion%20ArgoCD/imagenes/argocd-sync-flow.png)
 
-<a name="item3"></a>
-## Hay 3 formas de instalar argocd
+## ¿Qué es ArgoCD?
 
- - 1 manifiestos
-```
-      kubectl create namespace argocd
-      kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
-```
- - 2 helm
-```
-    helm repo add argo https://argoproj.github.io/argo-helm
-    helm install my-argocd-apps argo/argocd-apps --version 1.6.1
-```
-  - 3 operator
+ArgoCD es una herramienta que permite adoptar metodologías GitOps para el despliegue continuo de aplicaciones en clústers de Kubernetes. Su principal característica es la sincronización del estado de las aplicaciones desplegadas con sus respectivos manifiestos declarados en Git. Esto permite a los desarrolladores realizar cambios en la aplicación modificando solo el contenido en Git, ya sea con commits a ramas de desarrollo o modificaciones directas.
 
-<a name="item4"></a>
-## Arquictectura de argocd
+## Formas de instalar ArgoCD
 
- Al crear un argocd tiene 7 micro servicios , que es igual a 7 pod cada uno de ellos asociados a un servicio
+Existen tres formas principales de instalar ArgoCD:
 
-`argocd-application-controller-0:`
-Rol: Controla y gestiona las aplicaciones dentro de ArgoCD.
-Función: Supervisa y maneja la implementación, actualización y eliminación de aplicaciones en el clúster de Kubernetes.
-  
-`argocd-applicationset-controller-64c77cff5d-tkcs2:`
-Rol: Controla conjuntos de aplicaciones en ArgoCD.
-Función: Permite gestionar conjuntos de aplicaciones, facilitando la implementación y gestión de aplicaciones a escala.
+1. Usando manifiestos:
+   ```bash
+   kubectl create namespace argocd
+   kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+   ```
 
-`argocd-dex-server:`
-Rol: Servidor Dex para autenticación y autorización.
-Función: Proporciona servicios de autenticación y autorización para usuarios y servicios en ArgoCD.
-  
-`argocd-notifications-controller:`
-Rol: Controlador de notificaciones para eventos relacionados con aplicaciones.
-Función: Gestiona notificaciones para eventos específicos de aplicaciones, permitiendo a los usuarios recibir alertas sobre cambios importantes.
-  
-`argocd-redis:`
-Rol: Ejecuta el servidor Redis para almacenamiento temporal.
-Función: Almacena datos temporales y proporciona un almacenamiento efímero para ciertos procesos en ArgoCD.
-  
-`argocd-repo-server:`
-Rol: Servidor de repositorios para gestionar definiciones de aplicaciones.
-Función: Gestiona el almacenamiento y recuperación de las definiciones de aplicaciones almacenadas en el repositorio Git.
-  
-`argocd-server:`
-Rol: Servidor principal de ArgoCD.
-Función: Coordina las operaciones en el clúster de Kubernetes y proporciona la interfaz de usuario web para gestionar y desplegar aplicaciones.
-Instalacion argocd
+2. Usando Helm:
+   ```bash
+   helm repo add argo https://argoproj.github.io/argo-helm
+   helm install my-argocd-apps argo/argocd-apps --version 1.6.1
+   ```
 
-![Diagrama](https://github.com/Andherson333333/k8s/blob/main/Instalacion%20ArgoCD/imagenes/argocd-archictectura.PNG)
+3. Usando el operador (no se proporciona comando específico en el documento original)
 
-<a name="item5"></a>
-## Configuracion para iniciar 
+## Arquitectura de ArgoCD
 
-- Pasar el service para poder logiar de forma web UI
-```
-kubectl patch svc argocd-server -n argocd -p '{"spec": {"type": "NodePort"}}'
-```
-- Conseguir clave del usuario admin
- ```
-kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d; echo
-```
+ArgoCD se compone de 7 microservicios principales, cada uno asociado a un pod y un servicio:
 
-<a name="item6"></a>
-## Verificacion 
+1. argocd-application-controller: Controla y gestiona las aplicaciones dentro de ArgoCD.
+2. argocd-applicationset-controller: Controla conjuntos de aplicaciones en ArgoCD.
+3. argocd-dex-server: Servidor Dex para autenticación y autorización.
+4. argocd-notifications-controller: Controlador de notificaciones para eventos relacionados con aplicaciones.
+5. argocd-redis: Ejecuta el servidor Redis para almacenamiento temporal.
+6. argocd-repo-server: Servidor de repositorios para gestionar definiciones de aplicaciones.
+7. argocd-server: Servidor principal de ArgoCD.
 
-En este apartado verificaremos la instalacion si funciona , asi que vamos a realizar una serie de comandos 
+![Arquitectura de ArgoCD](https://github.com/Andherson333333/k8s/blob/main/Instalacion%20ArgoCD/imagenes/argocd-archictectura.PNG)
 
-```
+## Configuración inicial
+
+Para iniciar ArgoCD:
+
+1. Habilitar acceso web UI:
+   ```bash
+   kubectl patch svc argocd-server -n argocd -p '{"spec": {"type": "NodePort"}}'
+   ```
+
+2. Obtener la contraseña inicial del usuario admin:
+   ```bash
+   kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d; echo
+   ```
+
+## Verificación de la instalación
+
+Para verificar la instalación, ejecute los siguientes comandos:
+
+```bash
 kubectl get svc -n argocd
 kubectl get pod -n argocd
 ```
 
-![Diagrama](https://github.com/Andherson333333/k8s/blob/main/Instalacion%20ArgoCD/imagenes/argocd-4.PNG)
+![Verificación de ArgoCD](https://github.com/Andherson333333/k8s/blob/main/Instalacion%20ArgoCD/imagenes/argocd-4.PNG)
+
+---
+
+Para más información, consulte la [documentación oficial de ArgoCD](https://argo-cd.readthedocs.io/en/stable/).
 
 
