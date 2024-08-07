@@ -156,20 +156,3 @@ aplicamos los manifiesto y verificamos que funciones
 ![Diagrama](https://github.com/Andherson333333/k8s/blob/main/ingress%2Bmetallb/imagenes/ingress-7.JPG)
 
 ![Diagrama](https://github.com/Andherson333333/k8s/blob/main/ingress%2Bmetallb/imagenes/ingress-6.JPG)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
