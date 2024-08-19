@@ -68,4 +68,3 @@ Luego, ejecute el script
    - Ingrese el Nombre del Clúster (por ejemplo, my-kube.k8s.local)
    - Ingrese una Zona de Disponibilidad para el clúster (por ejemplo, us-east-1a)
 
-
