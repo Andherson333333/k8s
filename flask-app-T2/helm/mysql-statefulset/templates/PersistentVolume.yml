@@ -1,0 +1,16 @@
+#Persistente volumen
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: {{ include "mysql-statefulset.fullname" . }}-mysql-pv
+spec:
+  capacity:
+    storage: {{ .Values.persistentVolume.capacity }}
+  volumeMode: Filesystem
+  accessModes:
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Delete
+  storageClassName: {{ .Values.persistentVolume.storageClassName }}
+  hostPath:
+    path: {{ .Values.persistentVolume.hostPath }}
+    type: DirectoryOrCreate

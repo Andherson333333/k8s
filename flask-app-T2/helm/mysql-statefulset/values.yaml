@@ -1,0 +1,86 @@
+replicaCount: 3
+
+image:
+  repository: mysql
+  pullPolicy: IfNotPresent
+  tag: ""
+
+imagePullSecrets: []
+
+nameOverride: ""
+fullnameOverride: ""
+
+serviceAccount:
+  create: true
+  automount: true
+  annotations: {}
+  name: ""
+
+podAnnotations: {}
+podLabels: {}
+
+podSecurityContext: {}
+
+securityContext: {}
+
+service:
+  name: mysql-service
+  type: ClusterIP
+  port: 3306
+
+secret:
+  MYSQL_DATABASE: bXlEQg==
+  MYSQL_ROOT_PASSWORD: cm9vdA==
+  MYSQL_USER: YWRtaW4=
+  MYSQL_PASSWORD: YWRtaW4=
+
+configMap:
+    init: |
+      CREATE TABLE messages (
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        message TEXT
+      )
+
+persistentVolume:
+  enabled: true
+  capacity: 1Gi
+  storageClassName: local-path
+  hostPath: /root/storage
+
+persistentVolumeClaim:
+  enabled: true
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: local-path
+  resources:
+    requests:
+      storage: 1Gi
+      
+ingress:
+  enabled: false
+  className: ""
+  annotations: {}
+  hosts:
+    - host: chart-example.local
+      paths:
+        - path: /
+          pathType: ImplementationSpecific
+  tls: []
+
+resources: {}
+
+autoscaling:
+  enabled: false
+  minReplicas: 1
+  maxReplicas: 100
+  targetCPUUtilizationPercentage: 80
+
+volumes: []
+
+volumeMounts: []
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}

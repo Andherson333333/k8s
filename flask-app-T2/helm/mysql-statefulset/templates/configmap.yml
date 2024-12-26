@@ -1,0 +1,10 @@
+# templates/configmap.yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "mysql-statefulset.fullname" . }}-configmap
+  labels:
+    app: {{ include "mysql-statefulset.name" . }}
+data:
+  init.sql: |
+    {{ .Values.configMap.init | nindent 4 }}

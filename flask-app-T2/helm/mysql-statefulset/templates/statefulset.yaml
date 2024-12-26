@@ -1,0 +1,83 @@
+# statefulset.yaml
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: {{ include "mysql-statefulset.fullname" . }}
+  labels:
+    {{- include "mysql-statefulset.labels" . | nindent 4 }}
+spec:
+  serviceName: "{{ include "mysql-statefulset.fullname" . }}-headless"
+  {{- if not .Values.autoscaling.enabled }}
+  replicas: {{ .Values.replicaCount }}
+  {{- end }}
+  selector:
+    matchLabels:
+      {{- include "mysql-statefulset.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+      {{- with .Values.podAnnotations }}
+      annotations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      labels:
+        {{- include "mysql-statefulset.selectorLabels" . | nindent 8 }}
+    spec:
+      {{- with .Values.imagePullSecrets }}
+      imagePullSecrets:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      serviceAccountName: {{ include "mysql-statefulset.serviceAccountName" . }}
+      securityContext:
+        {{- toYaml .Values.podSecurityContext | nindent 8 }}
+      containers:
+        - name: {{ .Chart.Name }}
+          securityContext:
+            {{- toYaml .Values.securityContext | nindent 12 }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          ports:
+            - name: database
+              containerPort: 3306
+              protocol: TCP
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}
+          env:
+            - name: MYSQL_ROOT_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: {{ include "mysql-statefulset.fullname" . }}-mysql-secret
+                  key: MYSQL_ROOT_PASSWORD
+            - name: MYSQL_DATABASE
+              value: myDb
+            - name: MYSQL_USER
+              valueFrom:
+                secretKeyRef:
+                  name: {{ include "mysql-statefulset.fullname" . }}-mysql-secret
+                  key: MYSQL_USER
+            - name: MYSQL_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: {{ include "mysql-statefulset.fullname" . }}-mysql-secret
+                  key: MYSQL_PASSWORD
+          volumeMounts:
+            - name: config-volume
+              mountPath: /docker-entrypoint-initdb.d
+            - name: mysql-persistent-storage
+              mountPath: /var/lib/mysql
+      volumes:
+        - name: config-volume
+          configMap:
+            name: {{ include "mysql-statefulset.fullname" . }}-configmap
+        - name: mysql-persistent-storage
+          persistentVolumeClaim:
+            claimName: {{ include "mysql-statefulset.fullname" . }}-mysql-persistent-storage
+
+  volumeClaimTemplates:
+    - metadata:
+        name: mysql-persistent-storage
+      spec:
+        accessModes: ["ReadWriteOnce"]
+        storageClassName: {{ .Values.persistentVolumeClaim.storageClassName }}
+        resources:
+          requests:
+            storage: {{ .Values.persistentVolumeClaim.resources.requests.storage }}
