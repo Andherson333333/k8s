@@ -125,7 +125,7 @@ Si todo está configurado correctamente, deberías recibir un manifiesto YAML pa
 ![Diagrama](https://github.com/Andherson333333/k8s/blob/main/MCP-kubectl-ai/imagenes/kubeclt-ai-1.png)
 ![Diagrama](https://github.com/Andherson333333/k8s/blob/main/MCP-kubectl-ai/imagenes/kubeclt-ai-2.png)
 ![Diagrama](https://github.com/Andherson333333/k8s/blob/main/MCP-kubectl-ai/imagenes/kubeclt-ai-3.png)
-![Diagrama](https://github.com/Andherson333333/k8s/blob/main/MCP-kubectl-ai/imagenes/kubeclt-ai-4.pn)
+![Diagrama](https://github.com/Andherson333333/k8s/blob/main/MCP-kubectl-ai/imagenes/kubeclt-ai-4.png)
 
 ### 3. Verificar la configuración del modelo
 
