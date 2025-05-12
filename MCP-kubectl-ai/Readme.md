@@ -122,6 +122,11 @@ kubectl ai --model gemini-2.5-pro-exp-03-25 "crear un deployment con 3 réplicas
 
 Si todo está configurado correctamente, deberías recibir un manifiesto YAML para un pod de nginx.
 
+[nginx](https://github.com/Andherson333333/k8s/blob/main/MCP-kubectl-ai/imagenes/kubeclt-ai-1.png)
+[nginx](https://github.com/Andherson333333/k8s/blob/main/MCP-kubectl-ai/imagenes/kubeclt-ai-2.png)
+[nginx](https://github.com/Andherson333333/k8s/blob/main/MCP-kubectl-ai/imagenes/kubeclt-ai-3.png)
+[nginx](https://github.com/Andherson333333/k8s/blob/main/MCP-kubectl-ai/imagenes/kubeclt-ai-4.png)
+
 ### 3. Verificar la configuración del modelo
 
 Si el namespace se crea correctamente, kubectl-ai está funcionando perfectamente.
