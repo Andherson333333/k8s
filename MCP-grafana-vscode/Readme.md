@@ -112,7 +112,7 @@ La configuración de MCP-Grafana en VS Code es sencilla. A continuación se mues
 
 Cuando el servidor está correctamente configurado, verás un indicador "Running" junto a la entrada de Grafana en la interfaz de VS Code, como se muestra en la siguiente imagen:
 
-![MCP-Grafana Running en VS Code](ruta-a-tu-imagen.png)
+![MCP-Grafana Running en VS Code](https://github.com/Andherson333333/k8s/blob/main/MCP-grafana-vscode/imagenes/mcp-grafana-1.png)
 
 ## Pruebas
 
