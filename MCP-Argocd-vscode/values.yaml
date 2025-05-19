@@ -1,0 +1,45 @@
+# ArgoCD Helm Chart Values
+server:
+  service:
+    type: NodePort
+    nodePortHttp: 30109
+    nodePortHttps: 30168
+
+  # Allow HTTP connections
+  extraArgs:
+    - --insecure
+
+# User and permissions configuration
+configs:
+  cm:
+    # MCP user with minimal capabilities
+    accounts.mcp-user: apiKey,login
+
+  rbac:
+    policy.csv: |
+      # Application Management permissions
+      p, role:mcp, applications, get, */*, allow
+      p, role:mcp, applications, create, */*, allow
+      p, role:mcp, applications, update, */*, allow
+      p, role:mcp, applications, delete, */*, allow
+      p, role:mcp, applications, sync, */*, allow
+
+      # Resource Management permissions
+      p, role:mcp, applications/tree, get, */*, allow
+      p, role:mcp, applications/resources, get, */*, allow
+      p, role:mcp, logs, get, */*, allow
+      p, role:mcp, events, get, */*, allow
+      p, role:mcp, applications/resource/actions, get, */*, allow
+      p, role:mcp, applications/resource/actions, create, */*, allow
+
+      # Required supporting permissions
+      p, role:mcp, clusters, get, *, allow
+      p, role:mcp, repositories, get, *, allow
+      p, role:mcp, projects, get, *, allow
+
+      # Assign mcp-user to mcp role
+      g, mcp-user, role:mcp
+      g, admin, role:admin
+
+    # Default policy for users not assigned to any role
+    policy.default: role:readonly
