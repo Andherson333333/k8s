@@ -34,7 +34,7 @@ helm repo update
 helm install argocd argo/argo-cd -n argocd --create-namespace -f argocd-values.yaml
 ```
 
-Contenido del archivo `argocd-values.yaml`:
+Contenido del archivo `values.yaml`:
 
 ```yaml
 # ArgoCD Helm Chart Values
@@ -60,6 +60,7 @@ configs:
       p, role:mcp, applications, update, */*, allow
       p, role:mcp, applications, delete, */*, allow
       p, role:mcp, applications, sync, */*, allow
+
       # Resource Management permissions
       p, role:mcp, applications/tree, get, */*, allow
       p, role:mcp, applications/resources, get, */*, allow
@@ -67,13 +68,16 @@ configs:
       p, role:mcp, events, get, */*, allow
       p, role:mcp, applications/resource/actions, get, */*, allow
       p, role:mcp, applications/resource/actions, create, */*, allow
+
       # Required supporting permissions
       p, role:mcp, clusters, get, *, allow
       p, role:mcp, repositories, get, *, allow
       p, role:mcp, projects, get, *, allow
+
       # Assign mcp-user to mcp role
       g, mcp-user, role:mcp
       g, admin, role:admin
+
     # Default policy for users not assigned to any role
     policy.default: role:readonly
 ```
