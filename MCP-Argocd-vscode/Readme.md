@@ -26,11 +26,8 @@ Este repositorio contiene la configuración necesaria para integrar ArgoCD con e
 Si aún no tienes ArgoCD instalado, puedes hacerlo con Helm:
 
 ```bash
-# Agregar el repositorio de Helm para ArgoCD
 helm repo add argo https://argoproj.github.io/argo-helm
 helm repo update
-
-# Instalar ArgoCD con valores personalizados
 helm install argocd argo/argo-cd -n argocd --create-namespace -f argocd-values.yaml
 ```
 
@@ -85,7 +82,6 @@ configs:
 ### 2. Obtener las credenciales iniciales de ArgoCD
 
 ```bash
-# Obtener la contraseña inicial para el usuario admin
 kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d
 ```
 
@@ -101,11 +97,13 @@ helm upgrade argocd argo/argo-cd -n argocd -f argocd-values.yaml
 
 ### 2. Establecer contraseña para el usuario MCP
 
-```bash
-# Iniciar sesión con admin
-argocd login <ARGOCD_SERVER>:<PORT> --username admin --password <ADMIN_PASSWORD> --plaintext
 
-# Establecer contraseña para mcp-user
+Iniciar sesión con admin
+```bash
+argocd login <ARGOCD_SERVER>:<PORT> --username admin --password <ADMIN_PASSWORD> --plaintext
+```
+Establecer contraseña para mcp-user
+```
 argocd account update-password \
   --account mcp-user \
   --current-password <ADMIN_PASSWORD> \
@@ -114,11 +112,12 @@ argocd account update-password \
 
 ### 3. Generar un token API para MCP
 
+ Iniciar sesión con mcp-user
 ```bash
-# Iniciar sesión con mcp-user
 argocd login <ARGOCD_SERVER>:<PORT> --username mcp-user --password <MCP_USER_PASSWORD> --plaintext
-
-# Generar token sin expiración
+```
+Generar token sin expiración
+```
 argocd account generate-token --expires-in 0s
 ```
 
@@ -158,16 +157,13 @@ Reinicia Visual Studio Code para que cargue la nueva configuración.
 
 Puedes verificar que la configuración se haya aplicado correctamente usando estos comandos:
 
-```bash
-# Verificar configuración de usuarios en argocd-cm
+ Verificar configuración de usuarios en argocd-cm
+ ```
 kubectl get configmap argocd-cm -n argocd -o yaml | grep mcp-user
-
-# Verificar configuración RBAC
+```
+Verificar configuración RBAC
+```
 kubectl get configmap argocd-rbac-cm -n argocd -o yaml
-
-# Verificar permisos específicos con la herramienta RBAC de ArgoCD
-echo 'g, mcp-user, role:mcp' > /tmp/rbac-test.csv
-argocd admin settings rbac can --policy-file /tmp/rbac-test.csv mcp-user get applications
 ```
 
 ### 2. Probar la integración
