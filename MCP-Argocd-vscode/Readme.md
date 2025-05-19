@@ -186,15 +186,15 @@ Abre VS Code y chatear con el asistente de IA compatible con MCP. Puedes probar 
 
 ### Creación de aplicaciones desde VS Code
 
-![Creación de aplicación desde VS Code](./images/create-app-vscode.png)
+![Creación de aplicación desde VS Code](https://github.com/Andherson333333/k8s/blob/main/MCP-Argocd-vscode/Imagenes/argocd-mcp-2.png)
 
 ### Aplicaciones en ArgoCD
 
-![Aplicaciones en ArgoCD](./images/applications-argocd.png)
+![Aplicaciones en ArgoCD](https://github.com/Andherson333333/k8s/blob/main/MCP-Argocd-vscode/Imagenes/argocd-mcp-3.png)
 
 ### Integración con VS Code
 
-![Integración con VS Code](./images/integration-vscode.png)
+![Integración con VS Code](https://github.com/Andherson333333/k8s/blob/main/MCP-Argocd-vscode/Imagenes/argocd-mcp-4.png)
 
 ## Funcionalidades avanzadas
 
