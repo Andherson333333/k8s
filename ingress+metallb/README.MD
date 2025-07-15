@@ -1,4 +1,4 @@
-## Índice de contenidos
+## Índice de contenidos 
 * [Requisitos](#item1)
 * [Que es metallb?](#item2)
 * [Características de MetalLB](#item3)
