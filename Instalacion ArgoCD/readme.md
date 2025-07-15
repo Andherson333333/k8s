@@ -1,4 +1,4 @@
-# ArgoCD: Implementación de GitOps en Kubernetes
+# ArgoCD: Implementación de GitOps en Kubernetes 
 
 ## Descripción
 
