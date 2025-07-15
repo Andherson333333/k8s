@@ -1,4 +1,4 @@
-## Table of Contents
+## Table of Contents 
 * [Using this Repository](#item1)
 * [Requirements](#item2)
 * [Cluster Architecture](#item3)
