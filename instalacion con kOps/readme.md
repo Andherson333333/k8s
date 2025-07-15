@@ -1,4 +1,4 @@
-## Índice de contenidos
+## Índice de contenidos 
 * [Ques es kOps?](#item1)
 * [Requisitos antes de la instalacion](#item2)
 * [Instalacion kOps](#item3)
