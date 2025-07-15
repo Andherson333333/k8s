@@ -1,4 +1,4 @@
-## Índice de contenidos
+## Índice de contenidos 
 * [Que es kubectl](#item1)
 * [Que es admin.conf?](#item2)
 * [Que es kubeconfig?](#item3)
