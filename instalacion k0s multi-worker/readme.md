@@ -1,4 +1,4 @@
-## Índice de contenidos
+## Índice de contenidos 
 * [Referencias](#item1)
 * [Que es k0s?](#item2)
 * [Arquictetura](#item3)
